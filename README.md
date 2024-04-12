@@ -3,7 +3,7 @@
 other people did the initial study
 
 ## Methods
--I used this code 
+- I used this code 
 
 ## Conclusion
 chat GPT can be very helpful 
