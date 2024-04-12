@@ -1,9 +1,9 @@
 # FINAL PROJECT
-##Study Background
+## Study Background
 other people did the initial study
 
-##Methods
+## Methods
 -I used this code 
 
-##Conclusion
+## Conclusion
 chat GPT can be very helpful 
