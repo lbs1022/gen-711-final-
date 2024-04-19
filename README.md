@@ -21,5 +21,10 @@ fastqc 69_S8_L001_R2_001.fastq.gz -o ../fastqc_output
 fastqc 777_S1_L001_R1_001.fastq.gz -o ../fastqc_output  
 fastqc 777_S1_L001_R2_001.fastq.gz -o ../fastqc_output  
 
+RUN TRIMMOMATIC
+conda activate genomics
+trim_scriptV2.sh 69_S8_L001_R*
+trim_scriptV2.sh 777_S1_L001_R*
+
 ## Conclusion  
 chat GPT can be very helpful   
