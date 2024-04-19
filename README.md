@@ -3,9 +3,9 @@
 other people did the initial study
 
 ## Methods - I used this code 
-PREP DIRECTORIES + OBTAIN DATA
-mkdir gen-711-final-project
-cd gen-711-final-project
+ PREP DIRECTORIES + OBTAIN DATA
+ mkdir gen-711-final-project
+ cd gen-711-final-project
 mkdir raw_reads
 cp /tmp/[R1_fastq.gz] ~/gen-711-final-project/raw_reads
 mkdir fastqc_output
