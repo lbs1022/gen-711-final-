@@ -24,10 +24,11 @@ fastqc 777_S1_L001_R2_001.fastq.gz -o ../fastqc_output
 RUN TRIMMOMATIC  
 tmux
 conda activate genomics   
-cd ~/gen-711-final-project/
+cd ~/gen-711-final-project/  
 trim_scriptV2.sh ./raw_reads/15_S2_L001_R1_001.fastq.gz ./raw_reads/15_S2_L001_R2_001.fastq.gz  
 trim_scriptV2.sh ./raw_reads69_S8_L001_R1_001.fastq.gz ./raw_reads/69_S8_L001_R2_001.fastq.gz
-
+ctrl+b  
+d  
 
 ## Conclusion  
 chat GPT can be very helpful   
