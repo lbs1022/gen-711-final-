@@ -4,6 +4,6 @@ other people did the initial study
 
 ## Methods
 - I used this code 
-
+fastqc [R1 fastq.gz] [R2 fastq.gz] -o fastqc_output
 ## Conclusion
 chat GPT can be very helpful 
