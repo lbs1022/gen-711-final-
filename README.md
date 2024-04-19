@@ -32,8 +32,8 @@ d
 mkdir ./fastqc_trimmed
 
 FASTQC TRIMMED READS - ON POWERSHELL  
-ssh ntm1021@ron.sr.unh.edu
-cd gen-711-final-project
+ssh ntm1021@ron.sr.unh.edu  
+cd gen-711-final-project  
 fastqc ./trimmed_reads/15_S2_L001_R1_001.fastq.gz -o ./fastqc_trimmed  
 fastqc ./trimmed_reads/15_S2_L001_R2_001.fastq.gz -o ./fastqc_trimmed  
 fastqc ./trimmed_reads/69_S8_L001_R1_001.fastq.gz -o ./fastqc_trimmed  
