@@ -1,6 +1,6 @@
 #! /bin/bash
 
-#Prepped directories and obtained data#
+#Prep directories and obtained data
 mkdir gen-711-final-project
 cd gen-711-final-project
 mkdir raw_reads
@@ -10,9 +10,21 @@ cp /tmp/gen711_project_data/genome-assembly-fqs/15_S2_L001_R1_001.fastq.gz raw_r
 cp /tmp/gen711_project_data/genome-assembly-fqs/15_S2_L001_R2_001.fastq.gz raw_reads
 mkdir fastqc_output
 
-#Run FastQC on raw reads#
-cd gen-711-final-project
-fastqc raw_reads/69_S8_L001_R1_001.fastq.gz -o ../fastqc_output
-fastqc raw_reads/69_S8_L001_R2_001.fastq.gz -o ../fastqc_output
-fastqc raw_reads/15_S2_L001_R1_001.fastq.gz -o ../fastqc_output
-fastqc raw_reads/15_S2_L001_Rw_001.fastq.gz -o ../fastqc_output
+#Run FastQC on raw reads
+fastqc raw_reads/69_S8_L001_R1_001.fastq.gz -o ./fastqc_output
+fastqc raw_reads/69_S8_L001_R2_001.fastq.gz -o ./fastqc_output
+fastqc raw_reads/15_S2_L001_R1_001.fastq.gz -o ./fastqc_output
+fastqc raw_reads/15_S2_L001_R2_001.fastq.gz -o ./fastqc_output
+
+#Run trimmomatic
+conda activate genomics 
+trim_scriptV2.sh ./raw_reads/69_S8_L001_R1_001.fastq.gz .raw_reads/69_S8_L001_R2_001.fastq.gz
+trim_scriptV2.sh ./raw_reads/15_S2_L001_R1_001.fastq.gz .raw_reads/15_S2_L001_R2_001.fastq.gz
+mkdir ./fastqc_trimmed
+
+#Run FastQC on trimmed reads
+fastqc trimmed_reads/69_S8_L001_R1_001.fastq.gz -o ./fastqc_trimmed
+fastqc trimmed_reads/69_S8_L001_R2_001.fastq.gz -o ./fastqc_trimmed
+fastqc trimmed_reads/15_S2_L001_R1_001.fastq.gz -o ./fastqc_trimmed
+fastqc trimmed_reads/15_S2_L001_R2_001.fastq.gz -o ./fastqc_trimmed
+
