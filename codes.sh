@@ -11,4 +11,8 @@ cp /tmp/gen711_project_data/genome-assembly-fqs/15_S2_L001_R2_001.fastq.gz raw_r
 mkdir fastqc_output
 
 #Run FastQC on raw reads#
-cd gen-711-final
+cd gen-711-final-project
+fastqc raw_reads/69_S8_L001_R1_001.fastq.gz -o ../fastqc_output
+fastqc raw_reads/69_S8_L001_R2_001.fastq.gz -o ../fastqc_output
+fastqc raw_reads/15_S2_L001_R1_001.fastq.gz -o ../fastqc_output
+fastqc raw_reads/15_S2_L001_Rw_001.fastq.gz -o ../fastqc_output
