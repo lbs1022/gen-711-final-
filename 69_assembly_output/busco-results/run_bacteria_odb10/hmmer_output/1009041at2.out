@@ -1,0 +1,16 @@
+#                                                                                              --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                          accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                  ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NODE_63_length_35795_cov_84.512476_20  -            403 1009041at2           -            227     6e-77  256.8  10.9   1   2     7e-80   2.6e-76  254.7   7.8     1   210     9   263     9   273 0.86 # 23365 # 24573 # -1 # ID=63_20;partial=00;start_type=GTG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.703
+NODE_63_length_35795_cov_84.512476_20  -            403 1009041at2           -            227     6e-77  256.8  10.9   2   2       0.1   3.7e+02   -1.0   0.0   213   227   298   312   269   312 0.71 # 23365 # 24573 # -1 # ID=63_20;partial=00;start_type=GTG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.703
+NODE_173_length_15439_cov_109.830133_2 -            447 1009041at2           -            227     0.025   12.6   0.1   1   1   1.5e-05     0.056   11.5   0.1   104   153   241   290   238   303 0.88 # 1666 # 3006 # -1 # ID=173_2;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.761
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco_downloads/lineages/bacteria_odb10/hmms/1009041at2.hmm
+# Target file:     /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco-results/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco-results/run_bacteria_odb10/hmmer_output/1009041at2.out --cpu 1 /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco_downloads/lineages/bacteria_odb10/hmms/1009041at2.hmm /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco-results/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /home/users/ntm1021/gen-711-final-project/69_assembly_output
+# Date:            Fri May  3 15:32:03 2024
+# [ok]

@@ -1,0 +1,17 @@
+#                                                                                             --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                         accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                 ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NODE_78_length_32324_cov_90.111532_14 -            205 1211060at2           -            164   8.2e-49  164.2   3.5   1   2   5.2e-48   1.3e-44  150.6   2.5     1   134     1   149     1   157 0.89 # 15943 # 16557 # 1 # ID=78_14;partial=00;start_type=GTG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.680
+NODE_78_length_32324_cov_90.111532_14 -            205 1211060at2           -            164   8.2e-49  164.2   3.5   2   2   1.3e-05     0.031   12.8   0.0   136   164   173   204   161   204 0.82 # 15943 # 16557 # 1 # ID=78_14;partial=00;start_type=GTG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.680
+NODE_27_length_63206_cov_88.069595_50 -            272 1211060at2           -            164   3.3e-06   25.7   0.0   1   1   2.1e-09   5.1e-06   25.1   0.0    77   139     6    69     1    82 0.90 # 48114 # 48929 # -1 # ID=27_50;partial=00;start_type=GTG;rbs_motif=AGGAG/GGAGG;rbs_spacer=11-12bp;gc_cont=0.728
+NODE_66_length_34509_cov_93.199319_28 -            204 1211060at2           -            164    0.0017   16.8   0.3   1   1   1.1e-06    0.0026   16.2   0.3    78   132    73   127    69   140 0.92 # 29432 # 30043 # 1 # ID=66_28;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.757
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco_downloads/lineages/bacteria_odb10/hmms/1211060at2.hmm
+# Target file:     /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco-results/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco-results/run_bacteria_odb10/hmmer_output/1211060at2.out --cpu 1 /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco_downloads/lineages/bacteria_odb10/hmms/1211060at2.hmm /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco-results/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /home/users/ntm1021/gen-711-final-project/69_assembly_output
+# Date:            Fri May  3 15:32:05 2024
+# [ok]

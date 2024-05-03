@@ -1,0 +1,23 @@
+#                                                                                              --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                          accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                  ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NODE_55_length_37593_cov_100.293893_16 -            470 505485at2            -            234   2.5e-58  196.2  10.9   1   2   3.8e-45   5.5e-42  142.8   2.1     2   148    75   281    74   283 0.79 # 16825 # 18234 # 1 # ID=55_16;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.728
+NODE_55_length_37593_cov_100.293893_16 -            470 505485at2            -            234   2.5e-58  196.2  10.9   2   2   6.7e-16   9.8e-13   47.0   1.7   148   234   300   428   295   428 0.77 # 16825 # 18234 # 1 # ID=55_16;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.728
+NODE_92_length_28313_cov_70.797027_21  -            493 505485at2            -            234   0.00038   18.9   0.0   1   2   5.9e-06    0.0087   14.5   0.0     2    39   235   271   234   302 0.89 # 18597 # 20075 # -1 # ID=92_21;partial=00;start_type=GTG;rbs_motif=GGAGG;rbs_spacer=5-10bp;gc_cont=0.661
+NODE_92_length_28313_cov_70.797027_21  -            493 505485at2            -            234   0.00038   18.9   0.0   2   2      0.04        59    1.9   0.0    52    80   351   378   333   388 0.75 # 18597 # 20075 # -1 # ID=92_21;partial=00;start_type=GTG;rbs_motif=GGAGG;rbs_spacer=5-10bp;gc_cont=0.661
+NODE_12_length_92330_cov_88.093305_5   -            928 505485at2            -            234     0.022   13.2   0.1   1   1   2.4e-05     0.035   12.5   0.1     6    36    25    55    20    79 0.83 # 2797 # 5580 # -1 # ID=12_5;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.741
+NODE_285_length_3971_cov_99.461759_4   -            358 505485at2            -            234     0.022   13.2   1.5   1   2   0.00028       0.4    9.0   0.3    19    39    65    85    45   131 0.64 # 2059 # 3132 # 1 # ID=285_4;partial=00;start_type=GTG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.733
+NODE_285_length_3971_cov_99.461759_4   -            358 505485at2            -            234     0.022   13.2   1.5   2   2      0.46   6.7e+02   -1.5   0.1     8    37   271   298   265   311 0.82 # 2059 # 3132 # 1 # ID=285_4;partial=00;start_type=GTG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.733
+NODE_133_length_21226_cov_95.969193_8  -            566 505485at2            -            234      0.49    8.7   7.6   1   3   0.00094       1.4    7.3   0.2    17    37    28    48    21    55 0.87 # 7463 # 9160 # 1 # ID=133_8;partial=00;start_type=GTG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.757
+NODE_133_length_21226_cov_95.969193_8  -            566 505485at2            -            234      0.49    8.7   7.6   2   3    0.0046       6.8    5.0   0.1    15    39   341   365   330   378 0.84 # 7463 # 9160 # 1 # ID=133_8;partial=00;start_type=GTG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.757
+NODE_133_length_21226_cov_95.969193_8  -            566 505485at2            -            234      0.49    8.7   7.6   3   3      0.53   7.7e+02   -1.7   0.4   168   213   484   529   477   538 0.82 # 7463 # 9160 # 1 # ID=133_8;partial=00;start_type=GTG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_cont=0.757
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco_downloads/lineages/bacteria_odb10/hmms/505485at2.hmm
+# Target file:     /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco-results/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco-results/run_bacteria_odb10/hmmer_output/505485at2.out --cpu 1 /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco_downloads/lineages/bacteria_odb10/hmms/505485at2.hmm /home/users/ntm1021/gen-711-final-project/69_assembly_output/busco-results/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /home/users/ntm1021/gen-711-final-project/69_assembly_output
+# Date:            Fri May  3 15:32:14 2024
+# [ok]
