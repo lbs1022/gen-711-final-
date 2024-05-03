@@ -1,0 +1,15 @@
+#                                                                                             --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                         accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                 ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NODE_67_length_44483_cov_59.932072_49 -            103 2040741at2           -             54   7.1e-14   50.4   9.2   1   2     8e-07     0.007   15.2   1.7     1    13     2    14     2    15 0.97 # 42651 # 42959 # -1 # ID=67_49;partial=00;start_type=ATG;rbs_motif=GGAGG;rbs_spacer=5-10bp;gc_cont=0.670
+NODE_67_length_44483_cov_59.932072_49 -            103 2040741at2           -             54   7.1e-14   50.4   9.2   2   2   2.4e-13   2.1e-09   36.1   1.0    14    54    33    84    31    84 0.78 # 42651 # 42959 # -1 # ID=67_49;partial=00;start_type=ATG;rbs_motif=GGAGG;rbs_spacer=5-10bp;gc_cont=0.670
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco_downloads/lineages/bacteria_odb10/hmms/2040741at2.hmm
+# Target file:     /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco-results/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco-results/run_bacteria_odb10/hmmer_output/2040741at2.out --cpu 1 /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco_downloads/lineages/bacteria_odb10/hmms/2040741at2.hmm /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco-results/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /home/users/ntm1021/gen-711-final-project/15_assembly_output
+# Date:            Fri May  3 15:54:12 2024
+# [ok]

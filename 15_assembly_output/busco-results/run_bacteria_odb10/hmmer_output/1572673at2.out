@@ -1,0 +1,15 @@
+#                                                                                             --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                         accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                 ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NODE_56_length_48730_cov_65.049791_39 -            201 1572673at2           -            108   2.8e-39  132.3   7.9   1   2   1.9e-41   1.7e-37  126.6   4.9     4   101    30   129    23   136 0.85 # 45814 # 46416 # 1 # ID=56_39;partial=00;start_type=GTG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.693
+NODE_56_length_48730_cov_65.049791_39 -            201 1572673at2           -            108   2.8e-39  132.3   7.9   2   2   0.00033       2.9    6.8   0.0    84   106   170   193   161   195 0.83 # 45814 # 46416 # 1 # ID=56_39;partial=00;start_type=GTG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.693
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco_downloads/lineages/bacteria_odb10/hmms/1572673at2.hmm
+# Target file:     /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco-results/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco-results/run_bacteria_odb10/hmmer_output/1572673at2.out --cpu 1 /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco_downloads/lineages/bacteria_odb10/hmms/1572673at2.hmm /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco-results/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /home/users/ntm1021/gen-711-final-project/15_assembly_output
+# Date:            Fri May  3 15:54:03 2024
+# [ok]

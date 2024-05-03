@@ -1,0 +1,18 @@
+#                                                                                             --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                         accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                 ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+NODE_56_length_48730_cov_65.049791_18 -           1159 9601at2              -            826         0 1279.2  10.3   1   5     9e-42   7.9e-38  129.0   0.0    21   127   102   225    89   236 0.83 # 17006 # 20482 # 1 # ID=56_18;partial=00;start_type=TTG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.676
+NODE_56_length_48730_cov_65.049791_18 -           1159 9601at2              -            826         0 1279.2  10.3   2   5     8e-22     7e-18   63.0   0.0   131   197   253   319   238   333 0.87 # 17006 # 20482 # 1 # ID=56_18;partial=00;start_type=TTG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.676
+NODE_56_length_48730_cov_65.049791_18 -           1159 9601at2              -            826         0 1279.2  10.3   3   5   4.4e-89   3.9e-85  285.5   0.0   194   357   347   528   341   535 0.90 # 17006 # 20482 # 1 # ID=56_18;partial=00;start_type=TTG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.676
+NODE_56_length_48730_cov_65.049791_18 -           1159 9601at2              -            826         0 1279.2  10.3   4   5  1.7e-172  1.4e-168  561.5   3.6   358   691   555   922   550   937 0.91 # 17006 # 20482 # 1 # ID=56_18;partial=00;start_type=TTG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.676
+NODE_56_length_48730_cov_65.049791_18 -           1159 9601at2              -            826         0 1279.2  10.3   5   5   8.1e-75     7e-71  238.3   0.0   701   826   985  1116   948  1116 0.95 # 17006 # 20482 # 1 # ID=56_18;partial=00;start_type=TTG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont=0.676
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco_downloads/lineages/bacteria_odb10/hmms/9601at2.hmm
+# Target file:     /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco-results/prodigal_output/predicted_genes/predicted.faa
+# Option settings: hmmsearch --domtblout /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco-results/run_bacteria_odb10/hmmer_output/9601at2.out --cpu 1 /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco_downloads/lineages/bacteria_odb10/hmms/9601at2.hmm /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco-results/prodigal_output/predicted_genes/predicted.faa 
+# Current dir:     /home/users/ntm1021/gen-711-final-project/15_assembly_output
+# Date:            Fri May  3 15:54:21 2024
+# [ok]
