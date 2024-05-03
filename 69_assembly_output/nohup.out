@@ -1,0 +1,199 @@
+[15:38:01] This is prokka 1.14.6
+[15:38:01] Written by Torsten Seemann <torsten.seemann@gmail.com>
+[15:38:01] Homepage is https://github.com/tseemann/prokka
+[15:38:01] Local time is Fri May  3 15:38:01 2024
+[15:38:01] You are ntm1021
+[15:38:01] Operating system is linux
+[15:38:01] You have BioPerl 1.007002
+[15:38:01] System has 72 cores.
+[15:38:01] Will use maximum of 24 cores.
+[15:38:01] Annotating as >>> Bacteria <<<
+[15:38:01] Generating locus_tag from 'contigs.fasta' contents.
+[15:38:01] Setting --locustag DEOAGECF from MD5 de8a0ecf817e16127ab20258ee80527f
+[15:38:01] Creating new output folder: prokka_output
+[15:38:01] Running: mkdir -p prokka_output
+[15:38:01] Using filename prefix: PROKKA_05032024.XXX
+[15:38:01] Setting HMMER_NCPU=1
+[15:38:01] Writing log to: prokka_output/PROKKA_05032024.log
+[15:38:01] Command: /opt/anaconda/anaconda/envs/genomics/bin/prokka contigs.fasta --outdir prokka_output --cpus 24 --mincontiglen 200
+[15:38:01] Appending to PATH: /srv/apps/opt/anaconda/anaconda/envs/genomics/bin
+[15:38:01] Looking for 'aragorn' - found /opt/anaconda/anaconda/envs/genomics/bin/aragorn
+[15:38:01] Determined aragorn version is 001002 from 'ARAGORN v1.2.41 Dean Laslett'
+[15:38:01] Looking for 'barrnap' - found /opt/anaconda/anaconda/envs/genomics/bin/barrnap
+[15:38:02] Determined barrnap version is 000009 from 'barrnap 0.9'
+[15:38:02] Looking for 'blastp' - found /opt/anaconda/anaconda/envs/genomics/bin/blastp
+[15:38:02] Determined blastp version is 002011 from 'blastp: 2.11.0+'
+[15:38:02] Looking for 'cmpress' - found /opt/anaconda/anaconda/envs/genomics/bin/cmpress
+[15:38:02] Determined cmpress version is 001001 from '# INFERNAL 1.1.4 (Dec 2020)'
+[15:38:02] Looking for 'cmscan' - found /opt/anaconda/anaconda/envs/genomics/bin/cmscan
+[15:38:02] Determined cmscan version is 001001 from '# INFERNAL 1.1.4 (Dec 2020)'
+[15:38:02] Looking for 'egrep' - found /opt/anaconda/anaconda/envs/genomics/bin/egrep
+[15:38:02] Looking for 'find' - found /usr/bin/find
+[15:38:02] Looking for 'grep' - found /opt/anaconda/anaconda/envs/genomics/bin/grep
+[15:38:02] Looking for 'hmmpress' - found /opt/anaconda/anaconda/envs/genomics/bin/hmmpress
+[15:38:02] Determined hmmpress version is 003003 from '# HMMER 3.3.2 (Nov 2020); http://hmmer.org/'
+[15:38:02] Looking for 'hmmscan' - found /opt/anaconda/anaconda/envs/genomics/bin/hmmscan
+[15:38:02] Determined hmmscan version is 003003 from '# HMMER 3.3.2 (Nov 2020); http://hmmer.org/'
+[15:38:02] Looking for 'java' - found /opt/anaconda/anaconda/envs/genomics/bin/java
+[15:38:02] Looking for 'makeblastdb' - found /opt/anaconda/anaconda/envs/genomics/bin/makeblastdb
+[15:38:02] Determined makeblastdb version is 002011 from 'makeblastdb: 2.11.0+'
+[15:38:02] Looking for 'minced' - found /opt/anaconda/anaconda/envs/genomics/bin/minced
+[15:38:03] Determined minced version is 004002 from 'minced 0.4.2'
+[15:38:03] Looking for 'parallel' - found /opt/anaconda/anaconda/envs/genomics/bin/parallel
+[15:38:03] Determined parallel version is 20220722 from 'GNU parallel 20220722'
+[15:38:03] Looking for 'prodigal' - found /opt/anaconda/anaconda/envs/genomics/bin/prodigal
+[15:38:03] Determined prodigal version is 002006 from 'Prodigal V2.6.3: February, 2016'
+[15:38:03] Looking for 'prokka-genbank_to_fasta_db' - found /opt/anaconda/anaconda/envs/genomics/bin/prokka-genbank_to_fasta_db
+[15:38:03] Looking for 'rnammer' - found /usr/local/bin/rnammer
+[15:38:03] Determined rnammer version is 001002 from 'This rnammer 1.2, running from '/home/genome/joseph7e/bin/rnammer''
+[15:38:03] Looking for 'sed' - found /opt/anaconda/anaconda/envs/genomics/bin/sed
+[15:38:03] Looking for 'tbl2asn' - found /opt/anaconda/anaconda/envs/genomics/bin/tbl2asn
+[15:38:03] Determined tbl2asn version is 025007 from 'tbl2asn 25.7   arguments:'
+[15:38:03] Using genetic code table 11.
+[15:38:03] Loading and checking input file: contigs.fasta
+[15:38:04] Skipping short (<200 bp) contig: NODE_496_length_199_cov_72.144172
+[15:38:04] Skipping short (<200 bp) contig: NODE_497_length_199_cov_56.530675
+[15:38:04] Skipping short (<200 bp) contig: NODE_498_length_176_cov_53.706271
+[15:38:04] Skipping short (<200 bp) contig: NODE_499_length_174_cov_52.637874
+[15:38:04] Skipping short (<200 bp) contig: NODE_500_length_159_cov_52.923077
+[15:38:04] Skipping short (<200 bp) contig: NODE_501_length_145_cov_63.966912
+[15:38:04] Skipping short (<200 bp) contig: NODE_502_length_145_cov_60.194853
+[15:38:04] Skipping short (<200 bp) contig: NODE_503_length_145_cov_53.400735
+[15:38:04] Skipping short (<200 bp) contig: NODE_504_length_143_cov_78.229630
+[15:38:04] Skipping short (<200 bp) contig: NODE_505_length_136_cov_84.444444
+[15:38:04] Skipping short (<200 bp) contig: NODE_506_length_133_cov_80.442308
+[15:38:04] Skipping short (<200 bp) contig: NODE_507_length_130_cov_52.750973
+[15:38:04] Skipping short (<200 bp) contig: NODE_508_length_129_cov_114.500000
+[15:38:04] Skipping short (<200 bp) contig: NODE_509_length_128_cov_220941.000000
+[15:38:04] Skipping short (<200 bp) contig: NODE_510_length_128_cov_4018.000000
+[15:38:04] Skipping short (<200 bp) contig: NODE_511_length_128_cov_578.000000
+[15:38:04] Skipping short (<200 bp) contig: NODE_512_length_128_cov_320.000000
+[15:38:04] Skipping short (<200 bp) contig: NODE_513_length_127_cov_49.944882
+[15:38:04] Wrote 495 contigs totalling 7914234 bp.
+[15:38:04] Predicting tRNAs and tmRNAs
+[15:38:04] Running: aragorn -l -gc11  -w prokka_output\/PROKKA_05032024\.fna
+[15:38:11] 1 tRNA-Gly c[18486,18559] 33 (ccc)
+[15:38:11] 2 tRNA-Pro c[132965,133039] 35 (cgg)
+[15:38:11] 1 tRNA-Ser [149941,150033] 37 (tga)
+[15:38:11] 1 tRNA-Leu c[50086,50171] 34 (gag)
+[15:38:11] 2 tRNA-Ala c[98671,98744] 34 (tgc)
+[15:38:11] 3 tRNA-Ile c[111909,111985] 35 (gat)
+[15:38:11] 1 tRNA-Arg [32836,32927] 36 (tct)
+[15:38:11] 1 tRNA-Ala [103342,103415] 34 (tgc)
+[15:38:11] 1 tRNA-Leu [26311,26398] 34 (gag)
+[15:38:11] 1 tRNA-Arg c[68462,68535] 36 (cct)
+[15:38:11] 1 tRNA-Ala c[63387,63460] 34 (ggc)
+[15:38:11] 2 tRNA-Ala c[64208,64281] 34 (ggc)
+[15:38:11] 1 tRNA-Pro c[11217,11306] 33 (cgg)
+[15:38:11] 2 tRNA-Trp [60955,61031] 35 (cca)
+[15:38:11] 1 tRNA-Trp [9246,9319] 34 (cca)
+[15:38:11] 1 tRNA-Ser c[35945,36026] 41 (act)
+[15:38:11] 1 tRNA-Trp [6626,6715] 30 (cca)
+[15:38:11] 1 tRNA-Ala [1486,1560] 35 (cgc)
+[15:38:11] 1 tRNA-Met [4071,4145] 35 (cat)
+[15:38:11] 2 tRNA-Met [6399,6473] 35 (cat)
+[15:38:11] tRNA c[21237,21327] is a pseudo/wacky gene - skipping.
+[15:38:11] 1 tRNA-Asp c[12309,12384] 36 (gtc)
+[15:38:11] 2 tRNA-Phe c[16576,16650] 35 (gaa)
+[15:38:11] 3 tRNA-Asp c[16674,16749] 36 (gtc)
+[15:38:11] 4 tRNA-Glu c[16783,16856] 35 (ttc)
+[15:38:11] 5 tRNA-Lys [23990,24064] 34 (ttt)
+[15:38:11] 6 tRNA-Met [27664,27738] 35 (cat)
+[15:38:11] 1 tRNA-Pro c[17071,17145] 35 (ggg)
+[15:38:14] 1 tRNA-Ser c[3451,3539] 35 (tga)
+[15:38:14] 1 tRNA-Pro c[24365,24439] 35 (ggg)
+[15:38:14] 1 tRNA-Val [586,672] 36 (gac)
+[15:38:14] 2 tRNA-Pro c[27061,27137] 35 (tgg)
+[15:38:14] 3 tRNA-Gly [27300,27372] 33 (tcc)
+[15:38:14] 1 tRNA-Ser c[19551,19644] 34 (cga)
+[15:38:14] 1 tRNA-Ala c[30099,30184] 37 (ggc)
+[15:38:14] 1 tRNA-Ala c[1983,2066] 28 (ggc)
+[15:38:14] 1 tRNA-Ala c[5250,5324] 32 (ggc)
+[15:38:14] 1 tRNA-His [2,75] 34 (gtg)
+[15:38:14] 1 tmRNA c[19725,20123] 96,146 ANTKRDSSQQAFALAA*
+[15:38:14] 1 tRNA-Leu [1105,1191] 35 (cag)
+[15:38:14] 1 tRNA-Leu c[22075,22158] 34 (caa)
+[15:38:14] 1 tRNA-Arg c[10888,10961] 34 (ccg)
+[15:38:14] 1 tRNA-Thr [1570,1645] 35 (tgt)
+[15:38:14] tRNA c[8708,8805] is a pseudo/wacky gene - skipping.
+[15:38:14] 2 tRNA-Cys c[12593,12666] 34 (gca)
+[15:38:14] 1 tRNA-Arg [2968,3041] 34 (cct)
+[15:38:14] 1 tRNA-Ala c[14026,14102] 35 (agc)
+[15:38:16] 1 tRNA-Val [22621,22695] 33 (tac)
+[15:38:16] 1 tRNA-Val c[15019,15092] 33 (cac)
+[15:38:16] 1 tRNA-Gln [6955,7028] 35 (ttg)
+[15:38:16] 1 tRNA-Gly [19082,19172] 31 (ccc)
+[15:38:16] 1 tRNA-Gly [142,212] 32 (tcc)
+[15:38:16] 2 tRNA-Lys [9176,9250] 35 (ctt)
+[15:38:16] 3 tRNA-Lys [12547,12621] 35 (ctt)
+[15:38:16] 1 tRNA-Val c[14012,14084] 33 (gac)
+[15:38:16] 2 tRNA-Val c[14109,14181] 33 (gac)
+[15:38:16] 3 tRNA-Val c[14200,14272] 33 (gac)
+[15:38:16] 4 tRNA-Cys c[14274,14347] 33 (gca)
+[15:38:16] 5 tRNA-Gly c[14384,14457] 34 (gcc)
+[15:38:16] 1 tRNA-Thr c[10096,10172] 35 (cgt)
+[15:38:16] 1 tRNA-Leu [2247,2333] 36 (tag)
+[15:38:16] 1 tRNA-Ile c[1279,1360] 33 (gat)
+[15:38:16] 1 tRNA-Tyr [14924,15006] 35 (gta)
+[15:38:16] 2 tRNA-Thr [17823,17895] 34 (ggt)
+[15:38:16] 1 tRNA-Leu c[6806,6892] 33 (taa)
+[15:38:16] tRNA [11236,11328] is a pseudo/wacky gene - skipping.
+[15:38:18] 1 tRNA-Lys c[9076,9150] 35 (ctt)
+[15:38:18] 1 tRNA-Gly [632,705] 34 (gcc)
+[15:38:18] 2 tRNA-Gly [4629,4704] 34 (gcc)
+[15:38:18] tRNA [8871,8963] is a pseudo/wacky gene - skipping.
+[15:38:18] 1 tRNA-Ser c[8980,9067] 35 (gga)
+[15:38:18] 1 tRNA-Glu c[3645,3718] 35 (ctc)
+[15:38:18] 2 tRNA-Gln c[3762,3834] 34 (ctg)
+[15:38:18] 1 tRNA-Val c[162,235] 33 (cac)
+[15:38:18] 1 tRNA-Ala c[148,221] 34 (ggc)
+[15:38:18] 1 tRNA-Met c[262,335] 34 (cat)
+[15:38:18] Found 72 tRNAs
+[15:38:18] Predicting Ribosomal RNAs
+[15:38:18] Running Barrnap with 24 threads
+[15:38:22] 1 NODE_287_length_3817_cov_12.010298 334 16S ribosomal RNA
+[15:38:22] 2 NODE_287_length_3817_cov_12.010298 2161 23S ribosomal RNA (partial)
+[15:38:22] 3 NODE_436_length_412_cov_0.807018 6 16S ribosomal RNA (partial)
+[15:38:22] Found 3 rRNAs
+[15:38:22] Skipping ncRNA search, enable with --rfam if desired.
+[15:38:22] Total of 74 tRNA + rRNA features
+[15:38:22] Searching for CRISPR repeats
+[15:38:25] Found 0 CRISPRs
+[15:38:25] Predicting coding sequences
+[15:38:25] Contigs total 7914234 bp, so using single mode
+[15:38:25] Running: prodigal -i prokka_output\/PROKKA_05032024\.fna -c -m -g 11 -p single -f sco -q
+[15:38:41] Excluding CDS which overlaps existing RNA (tRNA) at NODE_2_length_150709_cov_85.449164:149165..150535 on - strand
+[15:38:42] Excluding CDS which overlaps existing RNA (tRNA) at NODE_6_length_120860_cov_81.346624:32741..34756 on + strand
+[15:38:42] Excluding CDS which overlaps existing RNA (tRNA) at NODE_7_length_116790_cov_88.970136:103008..103565 on + strand
+[15:38:43] Excluding CDS which overlaps existing RNA (tRNA) at NODE_13_length_87636_cov_89.371436:67339..68634 on - strand
+[15:38:44] Excluding CDS which overlaps existing RNA (tRNA) at NODE_22_length_67413_cov_97.457643:10087..11907 on + strand
+[15:38:46] Excluding CDS which overlaps existing RNA (tRNA) at NODE_38_length_47580_cov_95.247234:34749..36488 on - strand
+[15:38:46] Excluding CDS which overlaps existing RNA (tRNA) at NODE_39_length_46977_cov_95.560491:6482..6868 on - strand
+[15:38:48] Excluding CDS which overlaps existing RNA (tRNA) at NODE_67_length_34414_cov_90.716452:308..781 on + strand
+[15:38:48] Excluding CDS which overlaps existing RNA (tRNA) at NODE_70_length_33817_cov_117.340338:19421..20215 on - strand
+[15:38:48] Excluding CDS which overlaps existing RNA (tRNA) at NODE_73_length_32898_cov_88.219371:29861..30130 on + strand
+[15:38:48] Excluding CDS which overlaps existing RNA (tRNA) at NODE_73_length_32898_cov_88.219371:30163..31122 on - strand
+[15:38:48] Excluding CDS which overlaps existing RNA (tRNA) at NODE_76_length_32454_cov_89.883194:1886..2359 on - strand
+[15:38:48] Excluding CDS which overlaps existing RNA (tRNA) at NODE_79_length_32051_cov_95.910945:4907..8533 on + strand
+[15:38:49] Excluding CDS which overlaps existing RNA (tRNA) at NODE_100_length_27299_cov_100.104630:12072..12623 on + strand
+[15:38:50] Excluding CDS which overlaps existing RNA (tRNA) at NODE_134_length_21033_cov_95.481776:18855..20975 on - strand
+[15:38:51] Excluding CDS which overlaps existing RNA (tRNA) at NODE_145_length_18837_cov_119.406467:1341..1805 on + strand
+[15:38:52] Excluding CDS which overlaps existing RNA (tRNA) at NODE_197_length_12084_cov_109.667977:9141..9752 on - strand
+[15:38:53] Found 7034 CDS
+[15:38:53] Connecting features back to sequences
+[15:38:53] Not using genus-specific database. Try --usegenus to enable it.
+[15:38:53] Annotating CDS, please be patient.
+[15:38:53] Will use 24 CPUs for similarity searching.
+[15:38:57] There are still 7034 unannotated CDS left (started with 7034)
+[15:38:57] Will use blast to search against /srv/apps/opt/anaconda/anaconda/envs/genomics/db/kingdom/Bacteria/IS with 24 CPUs
+[15:38:57] Running: cat prokka_output\/PROKKA_05032024\.IS\.tmp\.2227156\.faa | parallel --gnu --plain -j 24 --block 48394 --recstart '>' --pipe blastp -query - -db /srv/apps/opt/anaconda/anaconda/envs/genomics/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > prokka_output\/PROKKA_05032024\.IS\.tmp\.2227156\.blast 2> /dev/null
+[15:39:42] Deleting unwanted file: prokka_output/PROKKA_05032024.IS.tmp.2227156.faa
+[15:39:42] Deleting unwanted file: prokka_output/PROKKA_05032024.IS.tmp.2227156.blast
+[15:39:45] There are still 7023 unannotated CDS left (started with 7034)
+[15:39:45] Will use blast to search against /srv/apps/opt/anaconda/anaconda/envs/genomics/db/kingdom/Bacteria/AMR with 24 CPUs
+[15:39:45] Running: cat prokka_output\/PROKKA_05032024\.AMR\.tmp\.2227156\.faa | parallel --gnu --plain -j 24 --block 48341 --recstart '>' --pipe blastp -query - -db /srv/apps/opt/anaconda/anaconda/envs/genomics/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > prokka_output\/PROKKA_05032024\.AMR\.tmp\.2227156\.blast 2> /dev/null
+[15:40:22] Deleting unwanted file: prokka_output/PROKKA_05032024.AMR.tmp.2227156.faa
+[15:40:22] Deleting unwanted file: prokka_output/PROKKA_05032024.AMR.tmp.2227156.blast
+[15:40:26] There are still 7022 unannotated CDS left (started with 7034)
+[15:40:26] Will use blast to search against /srv/apps/opt/anaconda/anaconda/envs/genomics/db/kingdom/Bacteria/sprot with 24 CPUs
+[15:40:26] Running: cat prokka_output\/PROKKA_05032024\.sprot\.tmp\.2227156\.faa | parallel --gnu --plain -j 24 --block 48327 --recstart '>' --pipe blastp -query - -db /srv/apps/opt/anaconda/anaconda/envs/genomics/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > prokka_output\/PROKKA_05032024\.sprot\.tmp\.2227156\.blast 2> /dev/null
