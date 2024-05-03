@@ -61,7 +61,7 @@ EXTRACT 16S rRNA SEQUENCES
 extract_sequences "16S ribosomal RNA" prokka_output/PROKKA_05032024.ffn > 16S_sequence.fasta
 
 BLAST  
-makeblastdb -in 15contigs.fasta -dbtype nucl -out 5contigs_db
+makeblastdb -in 15contigs.fasta -dbtype nucl -out 15contigs_db
 
 
 ## Conclusion  
