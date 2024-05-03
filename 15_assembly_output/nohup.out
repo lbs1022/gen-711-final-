@@ -179,3 +179,33 @@
 [15:49:16] Running: prodigal -i prokka_output\/PROKKA_05032024\.fna -c -m -g 11 -p single -f sco -q
 [15:49:33] Excluding CDS which overlaps existing RNA (tRNA) at NODE_1_length_277192_cov_63.518373:211932..213080 on + strand
 [15:49:33] Excluding CDS which overlaps existing RNA (tRNA) at NODE_2_length_182237_cov_60.878771:25702..25899 on - strand
+[15:49:33] Excluding CDS which overlaps existing RNA (tRNA) at NODE_3_length_180888_cov_65.292917:177734..179695 on - strand
+[15:49:34] Excluding CDS which overlaps existing RNA (tRNA) at NODE_7_length_126049_cov_57.128016:41731..43422 on - strand
+[15:49:34] Excluding CDS which overlaps existing RNA (tRNA) at NODE_8_length_125804_cov_59.572993:60608..61936 on - strand
+[15:49:35] Excluding CDS which overlaps existing RNA (tRNA) at NODE_10_length_120923_cov_61.740529:77480..78256 on - strand
+[15:49:36] Excluding CDS which overlaps existing RNA (tRNA) at NODE_16_length_105560_cov_65.833145:503..2215 on + strand
+[15:49:36] Excluding CDS which overlaps existing RNA (tRNA) at NODE_16_length_105560_cov_65.833145:21969..23039 on - strand
+[15:49:36] Excluding CDS which overlaps existing RNA (tRNA) at NODE_19_length_96667_cov_64.459126:36196..38259 on + strand
+[15:49:37] Excluding CDS which overlaps existing RNA (tRNA) at NODE_23_length_91824_cov_63.272637:59602..59943 on + strand
+[15:49:37] Excluding CDS which overlaps existing RNA (tRNA) at NODE_26_length_82456_cov_62.896501:16806..17744 on - strand
+[15:49:40] Excluding CDS which overlaps existing RNA (tRNA) at NODE_62_length_46584_cov_53.803862:27011..28444 on - strand
+[15:49:40] Excluding CDS which overlaps existing RNA (tRNA) at NODE_63_length_45796_cov_62.582649:5110..5973 on + strand
+[15:49:41] Excluding CDS which overlaps existing RNA (tRNA) at NODE_68_length_43980_cov_58.455339:19485..20342 on + strand
+[15:49:41] Excluding CDS which overlaps existing RNA (tRNA) at NODE_68_length_43980_cov_58.455339:20339..21856 on + strand
+[15:49:42] Excluding CDS which overlaps existing RNA (tRNA) at NODE_94_length_33179_cov_58.991559:5757..8951 on - strand
+[15:49:42] Excluding CDS which overlaps existing RNA (tRNA) at NODE_95_length_32602_cov_60.926066:1730..2917 on + strand
+[15:49:42] Excluding CDS which overlaps existing RNA (tRNA) at NODE_98_length_31703_cov_62.864042:13240..14319 on + strand
+[15:49:42] Excluding CDS which overlaps existing RNA (tRNA) at NODE_102_length_29670_cov_61.102021:188..700 on + strand
+[15:49:43] Excluding CDS which overlaps existing RNA (tRNA) at NODE_109_length_26755_cov_63.764346:15321..16604 on + strand
+[15:49:43] Excluding CDS which overlaps existing RNA (tRNA) at NODE_112_length_26138_cov_60.032678:22394..23140 on + strand
+[15:49:43] Excluding CDS which overlaps existing RNA (tRNA) at NODE_120_length_23713_cov_60.336344:7180..8151 on - strand
+[15:49:44] Excluding CDS which overlaps existing RNA (tRNA) at NODE_148_length_18643_cov_57.524951:14503..16245 on - strand
+[15:49:44] Excluding CDS which overlaps existing RNA (tRNA) at NODE_161_length_15551_cov_46.273081:2050..4113 on + strand
+[15:49:45] Found 8471 CDS
+[15:49:45] Connecting features back to sequences
+[15:49:45] Not using genus-specific database. Try --usegenus to enable it.
+[15:49:45] Annotating CDS, please be patient.
+[15:49:45] Will use 24 CPUs for similarity searching.
+[15:49:49] There are still 8471 unannotated CDS left (started with 8471)
+[15:49:49] Will use blast to search against /srv/apps/opt/anaconda/anaconda/envs/genomics/db/kingdom/Bacteria/IS with 24 CPUs
+[15:49:49] Running: cat prokka_output\/PROKKA_05032024\.IS\.tmp\.2261023\.faa | parallel --gnu --plain -j 24 --block 55357 --recstart '>' --pipe blastp -query - -db /srv/apps/opt/anaconda/anaconda/envs/genomics/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > prokka_output\/PROKKA_05032024\.IS\.tmp\.2261023\.blast 2> /dev/null
