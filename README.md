@@ -1,6 +1,8 @@
 # FINAL PROJECT  
 ## Study Background  
-other people did the initial study  
+All of the raw data was obtained through a study conducted by the Hubbard Genome Center at UNH 
+
+[Here is an overview of the initial study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6952671/)
 
 ## Methods - I used this code   
 PREP DIRECTORIES + OBTAIN DATA  
