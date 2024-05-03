@@ -65,6 +65,12 @@ extract_sequences "16S ribosomal RNA" prokka_output/PROKKA_05032024.ffn > 16S_se
 BLAST  
 makeblastdb -in 15contigs.fasta -dbtype nucl -out 15contigs_db  
 blastn -query 16S_sequence.fasta -db contigs_db -out 16S_vs_contigs_6.tsv -outfmt 6  
+blob_blast.sh contigs.fasta  
+
+READ MAPPING  
+bwa index contigs.fasta  
+
+
 
 
 ## Conclusion  
