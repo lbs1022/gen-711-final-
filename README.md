@@ -60,7 +60,7 @@ nohup prokka 15contigs.fasta --outdir prokka_output --cpus 24 --mincontiglen 200
 EXTRACT 16S rRNA SEQUENCES   
 extract_sequences "16S ribosomal RNA" prokka_output/PROKKA_05032024.ffn > 16S_sequence.fasta
 
-BLAST
+BLAST  
 makeblastdb -in 15contigs.fasta -dbtype nucl -out 5contigs_db
 
 
