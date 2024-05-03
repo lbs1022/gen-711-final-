@@ -53,9 +53,11 @@ quast.py 15contigs.fasta -o quast_results
 conda activate busco   
 busco -i 15contigs.fasta -m genome -o busco-results -l bacteria
 
-
-GENOME ANNOTATION  
+GENOME ANNOTATION    
 nohup prokka 15contigs.fasta --outdir prokka_output --cpus 24 --mincontiglen 200 &
+
+EXTRACT 16S rRNA SEQUENCES
+extract_sequences "16S ribosomal RNA" prokka_output/PROKKA_05032024.ffn > 16S_sequence.fasta
 
 
 ## Conclusion  
