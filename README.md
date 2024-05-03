@@ -1,6 +1,8 @@
 # FINAL PROJECT  
 ## Study Background  
-other people did the initial study  
+All of the raw data was obtained through a study conducted by the Hubbard Genome Center at UNH 
+
+[Here is an overview of the initial study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6952671/)
 
 ## Methods - I used this code   
 PREP DIRECTORIES + OBTAIN DATA  
@@ -38,6 +40,29 @@ fastqc ./trimmed_reads/15_S2_L001_R1_001.fastq.gz -o ./fastqc_trimmed
 fastqc ./trimmed_reads/15_S2_L001_R2_001.fastq.gz -o ./fastqc_trimmed  
 fastqc ./trimmed_reads/69_S8_L001_R1_001.fastq.gz -o ./fastqc_trimmed  
 fastqc ./trimmed_reads/69_S8_L001_R2_001.fastq.gz -o ./fastqc_trimmed  
+
+GENOME ASSEMBLY  
+tmux new -s assembly  
+conda activate genomics  
+cd ~/gen-711-final-project  
+nohup spades.py -1 15_S2_L001_R1_001.fastq.gz -2 15_S2_L001_R2_001.fastq.gz -s unpaired-15_S2_L001_R1_001.fastq.gz -s unpaired-15_S2_L001_R2_001.fastq.gz -o 15-spades-assembly-default -t 24 &  
+nohup spades.py -1 69_S8_L001_R1_001.fastq.gz -2 69_S8_L001_R2_001.fastq.gz -s unpaired-69_S8_L001_R1_001.fastq.gz -s unpaired-69_S8_L001_R2_001.fastq.gz -o 69-spades-assembly-default -t 24 &  
+
+GENOME ASSESMENT  
+quast.py 15contigs.fasta -o quast_results  
+conda activate busco   
+busco -i 15contigs.fasta -m genome -o busco-results -l bacteria
+
+GENOME ANNOTATION  
+conda activate genomics  
+nohup prokka 15contigs.fasta --outdir prokka_output --cpus 24 --mincontiglen 200 &
+
+EXTRACT 16S rRNA SEQUENCES   
+extract_sequences "16S ribosomal RNA" prokka_output/PROKKA_05032024.ffn > 16S_sequence.fasta
+
+BLAST  
+makeblastdb -in 15contigs.fasta -dbtype nucl -out 15contigs_db
+
 
 ## Conclusion  
 chat GPT can be very helpful   
