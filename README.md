@@ -56,13 +56,15 @@ busco -i 15contigs.fasta -m genome -o busco-results -l bacteria
 
 GENOME ANNOTATION  
 conda activate genomics  
-nohup prokka 15contigs.fasta --outdir prokka_output --cpus 24 --mincontiglen 200 &
+nohup prokka 15contigs.fasta --outdir prokka_output --cpus 24 --mincontiglen 200 &  
+grep -o "product=.*" prokka_output/PROKKA_*.gff | sed 's/product=//g' | sort | uniq -c | sort -nr > protein_abundances.txt  
 
 EXTRACT 16S rRNA SEQUENCES   
 extract_sequences "16S ribosomal RNA" prokka_output/PROKKA_05032024.ffn > 16S_sequence.fasta
 
 BLAST  
-makeblastdb -in 15contigs.fasta -dbtype nucl -out 15contigs_db
+makeblastdb -in 15contigs.fasta -dbtype nucl -out 15contigs_db  
+blastn -query 16S_sequence.fasta -db contigs_db -out 16S_vs_contigs_6.tsv -outfmt 6  
 
 
 ## Conclusion  
