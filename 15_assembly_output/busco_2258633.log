@@ -1,0 +1,27 @@
+2024-05-03 15:48:07 DEBUG:busco.run_BUSCO	Command line: /opt/anaconda/anaconda/envs/busco/bin/busco -i contigs.fasta -m genome -o busco-results -l bacteria
+2024-05-03 15:48:07 INFO:busco.run_BUSCO	***** Start a BUSCO v5.3.2 analysis, current time: 05/03/2024 15:48:07 *****
+2024-05-03 15:48:07 DEBUG:busco.ConfigManager	Getting config file
+2024-05-03 15:48:07 INFO:busco.ConfigManager	Configuring BUSCO with local environment
+2024-05-03 15:48:07 INFO:busco.BuscoConfig	Mode is genome
+2024-05-03 15:48:07 ERROR:busco.BuscoRunner	A run with the name /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco-results already exists...
+	If you are sure you wish to overwrite existing files, please use the -f (force) option
+2024-05-03 15:48:07 DEBUG:busco.BuscoRunner	A run with the name /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco-results already exists...
+	If you are sure you wish to overwrite existing files, please use the -f (force) option
+Traceback (most recent call last):
+  File "/opt/anaconda/anaconda/envs/busco/lib/python3.9/site-packages/busco/run_BUSCO.py", line 103, in run
+    self.load_config()
+  File "/opt/anaconda/anaconda/envs/busco/lib/python3.9/site-packages/busco/run_BUSCO.py", line 94, in load_config
+    self.config_manager.load_busco_config_main(sys.argv)
+  File "/opt/anaconda/anaconda/envs/busco/lib/python3.9/site-packages/busco/BuscoLogger.py", line 62, in wrapped_func
+    self.retval = func(*args, **kwargs)
+  File "/opt/anaconda/anaconda/envs/busco/lib/python3.9/site-packages/busco/ConfigManager.py", line 58, in load_busco_config_main
+    self.config_main.validate()
+  File "/opt/anaconda/anaconda/envs/busco/lib/python3.9/site-packages/busco/BuscoConfig.py", line 408, in validate
+    self._check_no_previous_run()
+  File "/opt/anaconda/anaconda/envs/busco/lib/python3.9/site-packages/busco/BuscoConfig.py", line 622, in _check_no_previous_run
+    raise BatchFatalError(
+busco.Exceptions.BatchFatalError: A run with the name /home/users/ntm1021/gen-711-final-project/15_assembly_output/busco-results already exists...
+	If you are sure you wish to overwrite existing files, please use the -f (force) option
+2024-05-03 15:48:07 ERROR:busco.BuscoRunner	BUSCO analysis failed !
+2024-05-03 15:48:07 ERROR:busco.BuscoRunner	Check the logs, read the user guide (https://busco.ezlab.org/busco_userguide.html), and check the BUSCO issue board on https://gitlab.com/ezlab/busco/issues
+
