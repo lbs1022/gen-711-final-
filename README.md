@@ -49,8 +49,8 @@ nohup spades.py -1 15_S2_L001_R1_001.fastq.gz -2 15_S2_L001_R2_001.fastq.gz -s u
 nohup spades.py -1 69_S8_L001_R1_001.fastq.gz -2 69_S8_L001_R2_001.fastq.gz -s unpaired-69_S8_L001_R1_001.fastq.gz -s unpaired-69_S8_L001_R2_001.fastq.gz -o 69-spades-assembly-default -t 24 &  
 
 GENOME ASSESMENT  
-quast.py 15contigs.fasta -o quast_results
-conda activate busco
+quast.py 15contigs.fasta -o quast_results  
+conda activate busco   
 busco -i 15contigs.fasta -m genome -o busco-results -l bacteria
 
 
