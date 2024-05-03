@@ -1,9 +1,10 @@
 # FINAL PROJECT  
-## Study Background  
-All of the raw data was obtained through a study conducted by the Hubbard Genome Center at UNH 
-
-[Here is an overview of the initial study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6952671/)
-
+## Study Background 
+The UNH Tech Camp was the group that collected the data and did an initial study on them.
+This camp was made of kids from grade 5 to 12.
+John Caparso, Alex Goin, Amino Hussein, Tonya Kirichok, Ada Milhauser, Aakansh Mysore, Nana Suarez, Olivia Tatro, Logan Quiter & Yasmin Yan were all the students that worked on this study. 
+This specific project was led by Joseph Sevigny, Steve Simpson, Kelley Thomas and Andrea de Assis.
+All of the data was collected in the summer of 2022 from Acadia National Park in Maine. 
 ## Methods - I used this code   
 PREP DIRECTORIES + OBTAIN DATA  
 mkdir gen-711-final-project  
