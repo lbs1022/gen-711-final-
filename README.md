@@ -53,38 +53,38 @@ busco -i 69contigs.fasta -m genome -o busco-results-69 -l bacteria
 
 GENOME ANNOTATION    
 conda activate genomics    
-nohup prokka 15contigs.fasta --outdir prokka_output_15 --cpus 24 --mincontiglen 200 &   
-nohup prokka 69contigs.fasta --outdir prokka_output_69 --cpus 24 --mincontiglen 200 &    
-grep -o "product=.*" prokka_output_15/PROKKA_* | sed 's/product=//g' | sort | uniq -c | sort -nr > protein_abundances_15.txt  
-grep -o "product=.*" prokka_output_69/PROKKA_* | sed 's/product=//g' | sort | uniq -c | sort -nr > protein_abundances_69.txt  
+nohup prokka 15contigs.fasta --outdir prokka_output_15 --cpus 24 --mincontiglen 200 &     
+nohup prokka 69contigs.fasta --outdir prokka_output_69 --cpus 24 --mincontiglen 200 &      
+grep -o "product=.*" prokka_output_15/PROKKA_* | sed 's/product=//g' | sort | uniq -c | sort -nr > protein_abundances_15.txt     
+grep -o "product=.*" prokka_output_69/PROKKA_* | sed 's/product=//g' | sort | uniq -c | sort -nr > protein_abundances_69.txt    
 
 EXTRACT 16S rRNA SEQUENCES   
-extract_sequences "16S ribosomal RNA" prokka_output_15/PROKKA_05032024.ffn > 16S_sequence_15.fasta  
-extract_sequences "16S ribosomal RNA" prokka_output_69/PROKKA_05032024.ffn > 16S_sequence_69.fasta
+extract_sequences "16S ribosomal RNA" prokka_output_15/PROKKA_05032024.ffn > 16S_sequence_15.fasta    
+extract_sequences "16S ribosomal RNA" prokka_output_69/PROKKA_05032024.ffn > 16S_sequence_69.fasta  
 
 BLAST  
-makeblastdb -in 15contigs.fasta -dbtype nucl -out 15contigs_db      
-makeblastdb -in 69contigs.fasta -dbtype nucl -out 69contigs_db
-blastn -query 16S_sequence_15.fasta -db 15contigs_db -out 16S_vs_15contigs_6.tsv -outfmt 6      
-blastn -query 16S_sequence_69.fasta -db 69contigs_db -out 16S_vs_69contigs_6.tsv -outfmt 6
+makeblastdb -in 15contigs.fasta -dbtype nucl -out 15contigs_db        
+makeblastdb -in 69contigs.fasta -dbtype nucl -out 69contigs_db  
+blastn -query 16S_sequence_15.fasta -db 15contigs_db -out 16S_vs_15contigs_6.tsv -outfmt 6        
+blastn -query 16S_sequence_69.fasta -db 69contigs_db -out 16S_vs_69contigs_6.tsv -outfmt 6  
+blob_blast.sh contigs.fasta    
 blob_blast.sh contigs.fasta  
-blob_blast.sh contigs.fasta
 
 READ MAPPING  
-bwa index 15contigs.fasta       
-bwa index 69contigs.fasta    
-bwa mem -t 24 15contigs.fasta ./trimmed_reads/15_S2_L001_R1_001.fastq.gz ./trimmed_reads/15_S2_L001_R2_001.fastq.gz > 15raw_mapped.sam    
-bwa mem -t 24 15contigs.fasta ./trimmed_reads/69_S8_L001_R1_001.fastq.gz ./trimmed_reads/69_S8_L001_R2_001.fastq.gz > 69raw_mapped.sam  
-samtools view -@ 24 -Sb  15raw_mapped.sam  | samtools sort -@ 24 -o 15sorted_mapped.bam
-samtools view -@ 24 -Sb  69raw_mapped.sam  | samtools sort -@ 24 -o 69sorted_mapped.bam
-samtools flagstat 15sorted_mapped.bam  
-samtools flagstat 69sorted_mapped.bam  
-samtools index 15sorted_mapped.bam  
-samtools index 69orted_mapped.bam    
-bedtools genomecov -ibam 15sorted_mapped.bam > 15coverage.out  
-bedtools genomecov -ibam 69sorted_mapped.bam > 69coverage.out   
-gen_input_table.py  --isbedfiles 15contigs.fasta 15coverage.out >  15coverage_table.tsv
-gen_input_table.py  --isbedfiles 69contigs.fasta 69coverage.out >  69coverage_table.tsv
+bwa index 15contigs.fasta         
+bwa index 69contigs.fasta     
+bwa mem -t 24 15contigs.fasta ./trimmed_reads/15_S2_L001_R1_001.fastq.gz ./trimmed_reads/15_S2_L001_R2_001.fastq.gz > 15raw_mapped.sam      
+bwa mem -t 24 15contigs.fasta ./trimmed_reads/69_S8_L001_R1_001.fastq.gz ./trimmed_reads/69_S8_L001_R2_001.fastq.gz > 69raw_mapped.sam    
+samtools view -@ 24 -Sb  15raw_mapped.sam  | samtools sort -@ 24 -o 15sorted_mapped.bam  
+samtools view -@ 24 -Sb  69raw_mapped.sam  | samtools sort -@ 24 -o 69sorted_mapped.bam  
+samtools flagstat 15sorted_mapped.bam    
+samtools flagstat 69sorted_mapped.bam    
+samtools index 15sorted_mapped.bam    
+samtools index 69orted_mapped.bam      
+bedtools genomecov -ibam 15sorted_mapped.bam > 15coverage.out    
+bedtools genomecov -ibam 69sorted_mapped.bam > 69coverage.out     
+gen_input_table.py  --isbedfiles 15contigs.fasta 15coverage.out >  15coverage_table.tsv  
+gen_input_table.py  --isbedfiles 69contigs.fasta 69coverage.out >  69coverage_table.tsv  
 
 
 
