@@ -74,7 +74,7 @@ READ MAPPING
 bwa index 15contigs.fasta         
 bwa index 69contigs.fasta     
 bwa mem -t 24 15contigs.fasta ./trimmed_reads/15_S2_L001_R1_001.fastq.gz ./trimmed_reads/15_S2_L001_R2_001.fastq.gz > 15raw_mapped.sam      
-bwa mem -t 24 15contigs.fasta ./trimmed_reads/69_S8_L001_R1_001.fastq.gz ./trimmed_reads/69_S8_L001_R2_001.fastq.gz > 69raw_mapped.sam    
+bwa mem -t 24 69contigs.fasta ./trimmed_reads/69_S8_L001_R1_001.fastq.gz ./trimmed_reads/69_S8_L001_R2_001.fastq.gz > 69raw_mapped.sam    
 samtools view -@ 24 -Sb  15raw_mapped.sam  | samtools sort -@ 24 -o 15sorted_mapped.bam  
 samtools view -@ 24 -Sb  69raw_mapped.sam  | samtools sort -@ 24 -o 69sorted_mapped.bam  
 samtools flagstat 15sorted_mapped.bam    
