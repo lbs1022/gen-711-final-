@@ -132,12 +132,12 @@ blobtools view -i 69blob_out.blobDB.json -r all -o 69blob_taxonomy
 blobtools plot -i 15blob_out.blobDB.json -r genus    
 blobtools plot -i 69blob_out.blobDB.json -r genus
 
-FILTERING GENOME
-#in order to decide the filtering criteria, we first tested the outcomes of filtering with different lengths and coverage numbers using the below code:
-grep -v '#' 15blob_taxonomy.15blob_out.blobDB.table.txt | awk -F'\t' '$2 > <insert-legnth>' | awk -F'\t' '$5 < <insert-coverage>' | awk '{print $18}'   
-grep -v '#' 69blob_taxonomy.69blob_out.blobDB.table.txt | awk -F'\t' '$2 > <insert-legnth>' | awk -F'\t' '$5 < <insert-coverage>' | awk '{print $18}'
-#once we decided on the filtering criteria, we ran the following code:
-grep -v '##' 15blob_taxonomy.15blob_out.blobDB.table.txt | awk -F'\t' '$2 > 500' | awk -F'\t' '$5 > 20' | awk -F'\t' '{print $1}' > 15list_of_contigs_to_keep_len500_cov20.txt  
+FILTERING GENOME  
+#in order to decide the filtering criteria, we first tested the outcomes of filtering with different lengths and coverage numbers using the below code:  
+grep -v '#' 15blob_taxonomy.15blob_out.blobDB.table.txt | awk -F'\t' '$2 > <insert-legnth>' | awk -F'\t' '$5 < <insert-coverage>' | awk '{print $18}'     
+grep -v '#' 69blob_taxonomy.69blob_out.blobDB.table.txt | awk -F'\t' '$2 > <insert-legnth>' | awk -F'\t' '$5 < <insert-coverage>' | awk '{print $18}'  
+#once we decided on the filtering criteria, we ran the following code:  
+grep -v '##' 15blob_taxonomy.15blob_out.blobDB.table.txt | awk -F'\t' '$2 > 500' | awk -F'\t' '$5 > 20' | awk -F'\t' '{print $1}' > 15list_of_contigs_to_keep_len500_cov20.txt    
 grep -v '##' 69blob_taxonomy.69blob_out.blobDB.table.txt | awk -F'\t' '$2 > 600' | awk -F'\t' '$5 > 10' | awk -F'\t' '{print $1}' > 69list_of_contigs_to_keep_len600_cov10.txt  
 
 
