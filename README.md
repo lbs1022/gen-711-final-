@@ -5,7 +5,20 @@ This camp was made of kids from grade 5 to 12.
 John Caparso, Alex Goin, Amino Hussein, Tonya Kirichok, Ada Milhauser, Aakansh Mysore, Nana Suarez, Olivia Tatro, Logan Quiter & Yasmin Yan were all the students that worked on this study. 
 This specific project was led by Joseph Sevigny, Steve Simpson, Kelley Thomas and Andrea de Assis.
 All of the data was collected in the summer of 2022 from Acadia National Park in Maine. 
-## Methods - I used this code   
+## Methods - I used this code 
+<details>
+  <summary>Prep Directories and Obtain Data</summary>
+  <p>mkdir gen-711-final-project  
+cd gen-711-final-project  
+mkdir raw_reads  
+cp /tmp/gen711_project_data/genome-assembly-fqs/69_S8_L001_R1_001.fastq.gz raw_reads  
+cp /tmp/gen711_project_data/genome-assembly-fqs/69_S8_L001_R2_001.fastq.gz raw_reads  
+cp /tmp/gen711_project_data/genome-assembly-fqs/777_S1_L001_R1_001.fastq.gz raw_reads  
+cp /tmp/gen711_project_data/genome-assembly-fqs/777_S1_L001_R2_001.fastq.gz raw_reads  
+mkdir fastqc_output</p>
+</details>
+
+
 PREP DIRECTORIES + OBTAIN DATA  
 mkdir gen-711-final-project  
 cd gen-711-final-project  
