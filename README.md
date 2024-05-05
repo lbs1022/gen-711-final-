@@ -125,11 +125,11 @@ gen_input_table.py  --isbedfiles 15contigs.fasta 15coverage.out >  15coverage_ta
 gen_input_table.py  --isbedfiles 69contigs.fasta 69coverage.out >  69coverage_table.tsv 
 
 NONTARGET CONTIG REMOVAL  
-blobtools create -i 15contigs.fasta -b 15sorted_mapped.bam -t 15contigs.fasta.vs.nt.cul5.1e5.megablast.out -o 15blob_out  
-blobtools create -i 69contigs.fasta -b 69sorted_mapped.bam -t 69contigs.fasta.vs.nt.cul5.1e5.megablast.out -o 69blob_out
-blobtools view -i 15blob_out.blobDB.json -r all -o 15blob_taxonomy  
-blobtools view -i 69blob_out.blobDB.json -r all -o 69blob_taxonomy
-blobtools plot -i 15blob_out.blobDB.json -r genus  
+blobtools create -i 15contigs.fasta -b 15sorted_mapped.bam -t 15contigs.fasta.vs.nt.cul5.1e5.megablast.out -o 15blob_out    
+blobtools create -i 69contigs.fasta -b 69sorted_mapped.bam -t 69contigs.fasta.vs.nt.cul5.1e5.megablast.out -o 69blob_out  
+blobtools view -i 15blob_out.blobDB.json -r all -o 15blob_taxonomy    
+blobtools view -i 69blob_out.blobDB.json -r all -o 69blob_taxonomy  
+blobtools plot -i 15blob_out.blobDB.json -r genus    
 blobtools plot -i 69blob_out.blobDB.json -r genus
 
 
