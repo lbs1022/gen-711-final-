@@ -8,11 +8,20 @@ All of the data was collected in the summer of 2022 from Acadia National Park in
 ## Methods - I used this code 
 <details>
   <summary>Prep Directories and Obtain Data</summary>
-   We made a final project directory called "gen-711-final-project"      
-  We then pulled the forwards and backwards reads for samples 69 and 15  
-
+   We made a final project directory called "gen-711-final-project"        
+   We then pulled the forwards and backwards reads for samples 69 and 15  
         <details> 
-        <summary> 
+        <summary>code</summary>
+  mkdir gen-711-final-project      
+  cd gen-711-final-project      
+  mkdir raw_reads      
+  cp /tmp/gen711_project_data/genome-assembly-fqs/69_S8_L001_R1_001.fastq.gz raw_reads      
+  cp /tmp/gen711_project_data/genome-assembly-fqs/69_S8_L001_R2_001.fastq.gz raw_reads      
+  cp /tmp/gen711_project_data/genome-assembly-fqs/777_S1_L001_R1_001.fastq.gz raw_reads      
+  cp /tmp/gen711_project_data/genome-assembly-fqs/777_S1_L001_R2_001.fastq.gz raw_reads      
+  mkdir fastqc_output    
+        </details>
+  
   
   
   
@@ -116,9 +125,12 @@ gen_input_table.py  --isbedfiles 15contigs.fasta 15coverage.out >  15coverage_ta
 gen_input_table.py  --isbedfiles 69contigs.fasta 69coverage.out >  69coverage_table.tsv 
 
 NONTARGET CONTIG REMOVAL  
-blobtools create -i 15contigs.fasta -b 15sorted_mapped.bam -t 15contigs.fasta.vs.nt.cul5.1e5.megablast.out -o 15blob_out      
-blobtools view -i 15blob_out.blobDB.json -r all -o 15blob_taxonomy   
-blobtools plot -i 15blob_out.blobDB.json -r genus 
+blobtools create -i 15contigs.fasta -b 15sorted_mapped.bam -t 15contigs.fasta.vs.nt.cul5.1e5.megablast.out -o 15blob_out  
+blobtools create -i 69contigs.fasta -b 69sorted_mapped.bam -t 69contigs.fasta.vs.nt.cul5.1e5.megablast.out -o 69blob_out
+blobtools view -i 15blob_out.blobDB.json -r all -o 15blob_taxonomy  
+blobtools view -i 69blob_out.blobDB.json -r all -o 69blob_taxonomy
+blobtools plot -i 15blob_out.blobDB.json -r genus  
+blobtools plot -i 69blob_out.blobDB.json -r genus
 
 
 
