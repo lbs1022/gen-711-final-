@@ -399,6 +399,13 @@ Fig 1. Shows the contig length, coverage, and taxonomy of the unfiltered Sample 
 ![plot](69_assembly_output/69blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.bam0.png)
 Fig 2. Shows the contig length, coverage, and taxonomy of the unfiltered Sample 69 assembly. The size of the "blobs" indicates the length of the contigs and where they fall indicates the coverage and GC content.
 
+### Final Visualizations
+
+![plot]Images/ActinomaduraLinear.png)
+Fig 3. Shows the visual linearized genome of sample 15, which was identified to be in the genus, *Actinomadura*
+
+![plot]Images/StreptomycesLinear.png)
+Fig 4. Shows the visual linearized genome of sample 69, which was identified to be in the genus, *Streptomyces*
 
 
 ## Conclusion  
