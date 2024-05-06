@@ -235,7 +235,7 @@
 
 ## Results
 
-!![Plot](15_assembly_output/blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.read_cov.bam0.png)
+![Plot](fastqc_output/15_S2_L001_R1_001_fastqc.html)
 
 
 
