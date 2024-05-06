@@ -255,7 +255,7 @@ Sample 15 Trimmed Reverse Read Quality:
 ### Sample 69 FastQC Results: 
 
 - There is also some improvement in the read qualities of the 69 sample trimmed reads
-- he Adapter Content decreased dramatically, failing in raw read FastQCs and passing in the trimmed analysis
+- The Adapter Content decreased dramatically, failing in raw read FastQCs and passing in the trimmed analysis
   
 Sample 69 Raw Forward Read Quality:
 ![Fastqc](Images/69ForwardRawFASTQC.png)
@@ -272,6 +272,25 @@ Sample 69 Trimmed Reverse Read Quality:
 ### BUSCO and QUAST Results:
 <details>
   <summary>15-BUSCO Results</summary>
+
+  - The good majority of genes in the assembly were found to be complete and a single-copy
+  - This indicates a rather complete assembly 
+
+    <details>
+      <summary>code</summary>
+          
+          ***** Results: *****
+    	   
+	        123	Complete BUSCOs (C)			   
+	        119	Complete and single-copy BUSCOs (S)	   
+	        4	Complete and duplicated BUSCOs (D)	   
+	        1	Fragmented BUSCOs (F)			   
+	        0	Missing BUSCOs (M)			   
+	        124	Total BUSCO groups searched 
+    </details>
+</details>
+<details>
+  <summary>69-BUSCO Results</summary>
 
   - The good majority of genes in the assembly were found to be complete and a single-copy
   - This indicates a rather complete assembly 
