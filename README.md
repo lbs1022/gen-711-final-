@@ -29,8 +29,7 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
 <details>
   <summary>FastQC Analysis of Raw Reads</summary>
 
-  - We ran the program, FastQC, in order to visualize the quality of our raw data
-  - This allows visualization of the quality of the inital reads
+  - We ran the program, FastQC, to visualize the quality of our raw data
 
     <details>
       <summary>code</summary>
@@ -43,21 +42,40 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
       
     </details>
 </details> 
+<details>
+  <summary>Trimming Raw Reads Using Trimmomatic</summary>
 
-RUN TRIMMOMATIC  
-tmux
-conda activate genomics   
-cd ~/gen-711-final-project/  
-trim_scriptV2.sh ./raw_reads/15_S2_L001_R1_001.fastq.gz ./raw_reads/15_S2_L001_R2_001.fastq.gz  
-trim_scriptV2.sh ./raw_reads69_S8_L001_R1_001.fastq.gz ./raw_reads/69_S8_L001_R2_001.fastq.gz   
-mkdir ./fastqc_trimmed
+  - In order to increase the quality of the sequenced reads we needed to trim the data
+  - The program, trimmomatic, recognizes low-quality bases and adapters and removes them from the file
+  - We utilized a pre-made SH file to run the program called "trim_scriptV2.sh"
+  - After running trimmomatic, we prepped the directory for FastQC analysis of the trimmed reads
 
-FASTQC TRIMMED READS  
-cd gen-711-final-project  
-fastqc ./trimmed_reads/15_S2_L001_R1_001.fastq.gz -o ./fastqc_trimmed  
-fastqc ./trimmed_reads/15_S2_L001_R2_001.fastq.gz -o ./fastqc_trimmed  
-fastqc ./trimmed_reads/69_S8_L001_R1_001.fastq.gz -o ./fastqc_trimmed  
-fastqc ./trimmed_reads/69_S8_L001_R2_001.fastq.gz -o ./fastqc_trimmed  
+    <details>
+      <summary>code</summary>
+          
+          conda activate genomics
+          trim_scriptV2.sh ./raw_reads/15_S2_L001_R1_001.fastq.gz ./raw_reads/15_S2_L001_R2_001.fastq.gz
+          trim_scriptV2.sh ./raw_reads/69_S8_L001_R1_001.fastq.gz ./raw_reads/69_S8_L001_R2_001.fastq.gz
+          mkdir ./fastqc_timmed 
+      
+    </details>
+</details>
+<details>
+  <summary>FastQC Analysis of Trimmed Reads</summary>
+
+  - After running trimmomatic, we now have to run a FastQC analysis to asses the quality of the reads
+  - This allows use to analyze how the quality of reads improved after trimming them
+
+    <details>
+      <summary>code</summary>
+          
+          fastqc ./trimmed_reads/15_S2_L001_R1_001.fastq.gz -o ./fastqc_trimmed
+          fastqc ./trimmed_reads/15_S2_L001_R2_001.fastq.gz -o ./fastqc_trimmed
+          fastqc ./trimmed_reads/69_S8_L001_R1_001.fastq.gz -o ./fastqc_trimmed
+          fastqc ./trimmed_reads/69_S8_L001_R2_001.fastq.gz -o ./fastqc_trimmed
+      
+    </details>
+</details>
 
 GENOME ASSEMBLY    
 conda activate genomics  
