@@ -63,8 +63,8 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
 <details>
   <summary>FastQC Analysis of Trimmed Reads</summary>
 
-  - After running trimmomatic, we now have to run a FastQC analysis to asses the quality of the reads
-  - This allows use to analyze how the quality of reads improved after trimming them
+  - After running trimmomatic, we now have to run a FastQC analysis to assess the quality of the reads
+  - This allows us to analyze how the quality of reads improved after trimming them
 
     <details>
       <summary>code</summary>
@@ -80,7 +80,7 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
   <summary>Genome Assembly using SPAdes</summary>
 
   - Now with trimmed reads, we can assemble the genome and get contigs by utilizing an assembly program
-  - We are using a program called SPAdes, which is pretty efficient at assembling bacterial genomes
+  - We ran a program called SPAdes, which is pretty efficient at assembling bacterial genomes
   - We also used nohup and & commands in combination, as SPAdes takes a while to compute and it allows the program to run even if we turn off our computers or leave ron
 
     <details>
@@ -96,7 +96,7 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
   <summary>Genome Assembly Assessment utilizing QUAST and BUSCO</summary>
 
   - Now with contigs, we can assess the quality of our assembly
-  - The first program, QUAST, tells us how well the genome was assembled and gives us valuable information such as total nucleotide length, N50, and the sizes of the individual contigs
+  - The first program we ran, QUAST, tells us how well the genome was assembled and gives us valuable information such as total nucleotide length, N50, and the sizes of the individual contigs
   - The second program, BUSCO, tells us the completeness of the assembly; it can tell us how many complete, fragmented, or duplicate genes we have
 
     <details>
@@ -111,11 +111,11 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
     </details>
 </details>
 <details>
-  <summary>Genome Annotation Utilizng PROKKA Pipeline</summary>
+  <summary>Genome Annotation Utilizing the PROKKA Pipeline</summary>
 
-  - PROKKA allows us to assign functions and meaning to the sequences we assembled earlier
-  - the output of the program generates many files, however, GFF is the master file containing all important annotations and sequences
-  - We also utilize grep to pull unique proteins associated with out assemblies and to store the abundances in a separate file
+  - We ran PROKKA, which allows us to assign functions and meaning to the sequences we assembled earlier
+  - the output of the program generated many files, however, GFF is the master file containing all important annotations and sequences
+  - We also utilized grep to pull unique proteins associated with our assemblies and stored the abundances in a separate file
 
     <details>
       <summary>code</summary>
@@ -128,18 +128,41 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
       
     </details>
 </details>     
+<details>
+  <summary>Extracting 16S rRNA Sequences</summary>
 
-EXTRACT 16S rRNA SEQUENCES   
-extract_sequences "16S ribosomal RNA" prokka_output_15/PROKKA_05032024.ffn > 16S_sequence_15.fasta    
-extract_sequences "16S ribosomal RNA" prokka_output_69/PROKKA_05032024.ffn > 16S_sequence_69.fasta  
+  - The PROKKA output assigned many different functions to our DNA sequences, including genes that code for 16S rRNA
+  - We ran an extraction program that pulled 16S rRNA gene sequences into a separate file in prep for BLAST 
 
-BLAST  
-makeblastdb -in 15contigs.fasta -dbtype nucl -out 15contigs_db        
-makeblastdb -in 69contigs.fasta -dbtype nucl -out 69contigs_db  
-blastn -query 16S_sequence_15.fasta -db 15contigs_db -out 16S_vs_15contigs_6.tsv -outfmt 6        
-blastn -query 16S_sequence_69.fasta -db 69contigs_db -out 16S_vs_69contigs_6.tsv -outfmt 6  
-blob_blast.sh contigs.fasta    
-blob_blast.sh contigs.fasta  
+    <details>
+      <summary>code</summary>
+          
+          extract_sequences "16S ribosomal RNA" prokka_output_15/PROKKA_05032024.ffn > 16S_sequence_15.fasta
+          extract_sequences "16S ribosomal RNA" prokka_output_69/PROKKA_05032024.ffn > 16S_sequence_69.fasta
+          
+    </details>
+</details>
+<details>
+  <summary>Organism Identification through BLAST</summary>
+
+  - BLAST, or the Basic Local Alignment Search Tool, allows us to assign taxonomy to the samples we assembled
+  - We first established a blast database using our original contig files
+  - We then ran a blast comparing the database to the 16S rRNA sequences
+  - Finally, we ran a blob blast SH program of our original contig files that outputs a file detailing taxonomic matches of each contig sequence
+
+    <details>
+      <summary>code</summary>
+          
+          makeblastdb -in 15contigs.fasta -dbtype nucl -out 15contigs_db
+          makeblastdb -in 69contigs.fasta -dbtype nucl -out 69contigs_db
+          blastn -query 16S_sequence_15.fasta -db 15contigs_db -out 16S_vs_15contigs_6.tsv -outfmt 6
+          blastn -query 16S_sequence_69.fasta -db 69contigs_db -out 16S_vs_69contigs_6.tsv -outfmt 6
+          blob_blast.sh 15contigs.fasta
+          blob_blast.sh 69contigs.fasta
+          
+    </details>
+</details>  
+  
 
 READ MAPPING  
 bwa index 15contigs.fasta         
