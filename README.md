@@ -268,8 +268,24 @@ Sample 69 Raw Reverse Read Quality:
 
 Sample 69 Trimmed Reverse Read Quality: 
 ![Fastqc](Images/69ReverseTrimmedFASTQC.png)
- 
 
+### BUSCO and QUAST Results:
+<details>
+  <summary>15-BUSCO Results</summary>
+
+  - The PROKKA output assigned many different functions to our DNA sequences, including genes that code for 16S rRNA
+  - We ran an extraction program that pulled 16S rRNA gene sequences into a separate file in prep for BLAST 
+
+    <details>
+      <summary>code</summary>
+          
+          extract_sequences "16S ribosomal RNA" prokka_output_15/PROKKA_05032024.ffn > 16S_sequence_15.fasta
+          extract_sequences "16S ribosomal RNA" prokka_output_69/PROKKA_05032024.ffn > 16S_sequence_69.fasta
+          
+    </details>
+</details>
+<details>
+  <summary>Organism Identification through BLAST</summary>
 
 
 
