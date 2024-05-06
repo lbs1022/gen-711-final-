@@ -315,35 +315,37 @@ Sample 69 Trimmed Reverse Read Quality:
 
     <details>
       <summary>QUAST Data</summary>
+		
 		Assembly                    contigs
-	  	"#" contigs (>= 0 bp)         388    
-         	 "#" contigs (>= 1000 bp)      282    
-          	"#" contigs (>= 5000 bp)      231    
-          	"#" contigs (>= 10000 bp)     184    
-          	"#" contigs (>= 25000 bp)     116    
-          	"#" contigs (>= 50000 bp)     55     
-          	Total length (>= 0 bp)      9053444
-          	Total length (>= 1000 bp)   9011457
-          	Total length (>= 5000 bp)   8869484
-          	Total length (>= 10000 bp)  8526563
-          	Total length (>= 25000 bp)  7346827
-          	Total length (>= 50000 bp)  5117275
-          	"#" contigs                   293    
-          	Largest contig              277192 
-          	Total length                9018494
-           	GC (%)                      72.36  
-           	N50                         59866  
-           	N75                         32290  
-           	L50                         44     
-           	L75                         96     
-          	"#" N's per 100 kbp           0.00 
+		# contigs (>= 0 bp)         388    
+		# contigs (>= 1000 bp)      282    
+		# contigs (>= 5000 bp)      231    
+		# contigs (>= 10000 bp)     184    
+		# contigs (>= 25000 bp)     116    
+		# contigs (>= 50000 bp)     55     
+		Total length (>= 0 bp)      9053444
+		Total length (>= 1000 bp)   9011457
+		Total length (>= 5000 bp)   8869484
+		Total length (>= 10000 bp)  8526563
+		Total length (>= 25000 bp)  7346827
+		Total length (>= 50000 bp)  5117275
+		# contigs                   293    
+		Largest contig              277192 
+		Total length                9018494
+		GC (%)                      72.36  
+		N50                         59866  
+		N75                         32290  
+		L50                         44     
+		L75                         96     
+		# N's per 100 kbp           0.00 
           
     </details>
 </details>
 <details>
   <summary>69-QUAST Results</summary>
 	
-- The N50 in the QUAST Report is just about 6kb, which is pretty decent for Illumina sequencing 
+- The N50 in the QUAST Report is just about 3.6kb, which isn't the best
+- However, based on the BUSCO results the lack of contiguity should not become an issue
 
     <details>
       <summary>QUAST Data</summary>
