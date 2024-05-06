@@ -5,7 +5,7 @@ This camp was primarily composed of kids from grade 5 to 12.
 The students who specifically worked on this study include John Caparso, Alex Goin, Amino Hussein, Tonya Kirichok, Ada Milhauser, Aakansh Mysore, Nana Suarez, Olivia Tatro, Logan Quiter, and Yasmin Yan.
 This specific project was led by Joseph Sevigny, Steve Simpson, Kelley Thomas, and Andrea de Assis.
 The data and microbe collection was done in the summer of 2022 in Arcadia National Park. 
-## Methods - I used this code 
+## Methods 
 <details>
   <summary>Prep Directories and Obtain Data</summary>
   
@@ -81,7 +81,7 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
 
   - Now with trimmed reads, we can assemble the genome and get contigs by utilizing an assembly program
   - We are using a program called SPAdes, which is pretty efficient at assembling bacterial genomes
-  - We also used nohup and & in combination as this program takes a while to compute and it allows the program to run even if we turn off out computers
+  - We also used nohup and & in combination, as this program takes a while to compute and it allows the program to run even if we turn off our computers
 
     <details>
       <summary>code</summary>
@@ -92,20 +92,42 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
       
     </details>
 </details>
+<details>
+  <summary>Genome Assembly Assessment utilizing QUAST and BUSCO</summary>
 
-GENOME ASSESMENT    
-quast.py 15contigs.fasta -o quast_results_15    
-quast.py 69contigs.fasta -o quast_results_69  
-conda activate busco     
-busco -i 15contigs.fasta -m genome -o busco-results-15 -l bacteria  
-busco -i 69contigs.fasta -m genome -o busco-results-69 -l bacteria  
+  - Now with contigs, we can assess the quality of our assembly
+  - The first program, QUAST, tells us how well the genome was assembled and gives us valuable information such as total nucleotide length, N50, and the sizes of the individual contigs
+  - The second program, BUSCO, tells us the completeness of the assembly; it can tell us how many complete, fragmented, or duplicate genes we have
 
-GENOME ANNOTATION    
-conda activate genomics    
-nohup prokka 15contigs.fasta --outdir prokka_output_15 --cpus 24 --mincontiglen 200 &     
-nohup prokka 69contigs.fasta --outdir prokka_output_69 --cpus 24 --mincontiglen 200 &      
-grep -o "product=.*" prokka_output_15/PROKKA_* | sed 's/product=//g' | sort | uniq -c | sort -nr > protein_abundances_15.txt     
-grep -o "product=.*" prokka_output_69/PROKKA_* | sed 's/product=//g' | sort | uniq -c | sort -nr > protein_abundances_69.txt    
+    <details>
+      <summary>code</summary>
+          
+          quast.py 15contigs.fasta -o quast_results_15
+          quast.py 69contigs.fasta -o quast_results_69
+          conda activate busco
+          busco -i 15contigs.fasta -m genome -o busco-results-15 -l bacteria
+          busco -i 69contigs.fasta -m genome -o busco-results-69 -l bacteria  
+      
+    </details>
+</details>
+<details>
+  <summary>Genome Annotation Utilizng PROKKA Pipeline</summary>
+
+  - PROKKA allows us to assign functions and meaning to the sequences we assembled earlier
+  - the output of the program generates many files, however, GFF is the master file containing all important annotations and sequences
+  - We also utilize grep to pull unique proteins associated with out assemblies and to store the abundances in a separate file
+
+    <details>
+      <summary>code</summary>
+          
+          conda activate genomics
+          nohup prokka 15contigs.fasta --outdir prokka_output_15 --cpus 24 --mincontiglen 200 &
+          nohup prokka 69contigs.fasta --outdir prokka_output_69 --cpus 24 --mincontiglen 200 &
+          grep -o "product=.*" prokka_output_15/PROKKA_* | sed 's/product=//g' | sort | uniq -c | sort -nr > protein_abundances_15.txt
+          grep -o "product=.*" prokka_output_69/PROKKA_* | sed 's/product=//g' | sort | uniq -c | sort -nr > protein_abundances_69.txt 
+      
+    </details>
+</details>     
 
 EXTRACT 16S rRNA SEQUENCES   
 extract_sequences "16S ribosomal RNA" prokka_output_15/PROKKA_05032024.ffn > 16S_sequence_15.fasta    
