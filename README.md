@@ -215,8 +215,8 @@
   <summary>Filtering the Genomes</summary>
 
   - We first used grep programming, and awk to read our blob output table and decide on filtering criteria to filter our genomes
-  - After deciding what filtering criteria was approproate for each genome, we used grep to grab those sequences and output the contig header to a separate file used to filter the fasta file in the next step
-  - We then used a filtering python file to convert our original contigs to the final fasta file with our filtered genome 
+  - After deciding what filtering criteria was appropriate for each genome, we used grep to grab those sequences and output the contig header to a separate file used to filter the fasta file in the next step
+  - We then used the file, filter_contigs_by_list.py, to convert our original contigs to the final fasta file with our filtered genome 
     
     <details>
       <summary>code</summary>
