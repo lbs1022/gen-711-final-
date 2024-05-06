@@ -234,23 +234,16 @@
 </details>
 
 ## Results
+<details> 
+  <summary>FASTQC Read Quality</summary>
+  
+  <details>
+    <summary>Sample 15 Raw Reads</summary>
 
-  div.main {
-    display:block;
-    position:absolute;
-    overflow:auto;
-    height:auto;
-    width:auto;
-    top:4.5em;
-    bottom:2.3em;
-    left:18em;
-    right:0;
-    border-left: 1px solid #CCC;
-    padding:0 0 0 1em;
-    background-color: white;
-    z-index:1;
-  }
-
+      ![raw_quality_reads](Images/15ForRawFASTQC.png)
+    
+  </details>
+</details>
 
 
 
