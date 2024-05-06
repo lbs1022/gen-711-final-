@@ -8,11 +8,11 @@ All of the data was collected in the summer of 2022 from Acadia National Park in
 ## Methods - I used this code 
 <details>
   <summary>Prep Directories and Obtain Data</summary>
-   We made a final project directory called "gen-711-final-project"        
-   We then pulled the forwards and backwards reads for samples 69 and 15  
+   - We made a final project directory called "gen-711-final-project"        
+   - We then pulled the forwards and backwards reads for samples 69 and 15  
         <details> 
         <summary>code</summary>
-  mkdir gen-711-final-project        
+  print(mkdir gen-711-final-project)      
   cd gen-711-final-project        
   mkdir raw_reads        
   cp /tmp/gen711_project_data/genome-assembly-fqs/69_S8_L001_R1_001.fastq.gz raw_reads        
