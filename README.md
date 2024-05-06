@@ -237,9 +237,8 @@
 
   - Installed a nucleotide database to check for contamination
   - Ran a blast of our filtered genome
-    	- Because we found contamination in the sample 69, we had to remove the contig using nano and refiltered the genome
-    	- We also checked for contamination again
-  - Figure out how to visualize  
+  - Because we found contamination in sample 69, we had to remove the contig using nano and refiltered the genome; We also checked for contamination again
+  - *Figure out how to visualize Genome and insert code*  
     
     <details>
       <summary>code</summary>
