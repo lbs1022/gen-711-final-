@@ -308,6 +308,18 @@ Sample 69 Trimmed Reverse Read Quality:
 		124	Total BUSCO groups searched 
     </details>
 </details>
+<details>
+  <summary>15-QUAST Results</summary>
+
+  - The good majority of genes in the assembly were found to be complete and a single-copy
+  - This indicates a rather complete assembly 
+
+    <details>
+      <summary>QUAST Data</summary>
+          
+          
+    </details>
+</details>
 
 
 
