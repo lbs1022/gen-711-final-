@@ -10,7 +10,7 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
   <summary>Prep Directories and Obtain Data</summary>
   
    - We made a final project directory called "gen-711-final-project"  
-   - then pulled the forward and backward reads for samples 69 and 15
+   - We then pulled the forward and backward reads for samples 69 and 15
         
         <details> 
         <summary>code</summary>
@@ -26,24 +26,23 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
          
         </details>
 </details>
+<details>
+  <summary>FastQC Analysis of Raw Reads</summary>
 
+  - We ran the program, FastQC, in order to visualize the quality of our raw data
+  - This allows visualization of the quality of the inital reads
 
-PREP DIRECTORIES + OBTAIN DATA  
-mkdir gen-711-final-project  
-cd gen-711-final-project  
-mkdir raw_reads  
-cp /tmp/gen711_project_data/genome-assembly-fqs/69_S8_L001_R1_001.fastq.gz raw_reads  
-cp /tmp/gen711_project_data/genome-assembly-fqs/69_S8_L001_R2_001.fastq.gz raw_reads  
-cp /tmp/gen711_project_data/genome-assembly-fqs/777_S1_L001_R1_001.fastq.gz raw_reads  
-cp /tmp/gen711_project_data/genome-assembly-fqs/777_S1_L001_R2_001.fastq.gz raw_reads  
-mkdir fastqc_output  
-
-FASTQC   
-cd raw_reads  
-fastqc 69_S8_L001_R1_001.fastq.gz -o ../fastqc_output  
-fastqc 69_S8_L001_R2_001.fastq.gz -o ../fastqc_output  
-fastqc 777_S1_L001_R1_001.fastq.gz -o ../fastqc_output  
-fastqc 777_S1_L001_R2_001.fastq.gz -o ../fastqc_output  
+    <details>
+      <summary>code</summary>
+          
+          cd raw_reads
+          fastqc 69_S8_L001_R1_001.fastq.gz -o ../fastqc_output
+          fastqc 69_S8_L001_R2_001.fastq.gz -o ../fastqc_output
+          fastqc 15_S2_L001_R1_001.fastq.gz -o ../fastqc_output
+          fastqc 15_S2_L001_R2_001.fastq.gz -o ../fastqc_output  
+      
+    </details>
+</details> 
 
 RUN TRIMMOMATIC  
 tmux
