@@ -234,9 +234,11 @@
 </details>
 
 ## Results
-Sample 15 forward raw reads analysis:  
 
-!(fastqc_output/15_S2_L001_R1_001_fastqc.html)
+!(15_assembly_output/blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.read_cov.bamO.png)
+
+
+
 
 
 ## Conclusion  
