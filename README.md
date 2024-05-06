@@ -237,6 +237,8 @@
 
   - Installed a nucleotide database to check for contamination
   - Ran a blast of our filtered genome
+    	- Because we found contamination in the sample 69, we had to remove the contig using nano and refiltered the genome
+    	- We also checked for contamination again
   - Figure out how to visualize  
     
     <details>
@@ -245,7 +247,9 @@
           wget "https://ftp.ncbi.nlm.nih.gov/pub/UniVec/UniVec"
           blastn -reward 1 -penalty -5 -gapopen 3 -gapextend 3 -dust yes -soft_masking true -evalue 700 -searchsp 1750000000000 -query Actinomadura_filtered.fasta -subject UniVec  -outfmt 6 -out genome_vs_univec.6
     	  blastn -reward 1 -penalty -5 -gapopen 3 -gapextend 3 -dust yes -soft_masking true -evalue 700 -searchsp 1750000000000 -query Streptomyces_filtered.fasta -subject UniVec  -outfmt 6 -out genome_vs_univec.6
-          
+    	  nano 69list_of_contigs_to_keep_len600_cov10.txt #remove the header: NODE_18_legnth_71546_cov_97.389896
+    	  filter_contigs_by_list.py 69contigs.fasta 69list_of_contigs_to_keep_len600_cov10.txt Streptomyces_filtered2.fasta
+          blastn -reward 1 -penalty -5 -gapopen 3 -gapextend 3 -dust yes -soft_masking true -evalue 700 -searchsp 1750000000000 -query Streptomyces_filtered2.fasta -subject UniVec  -outfmt 6 -out genome_vs_univec.6
     </details>
 </details> 
 
