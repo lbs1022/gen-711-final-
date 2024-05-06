@@ -235,7 +235,7 @@
 
 ## Results
 
-!(15_assembly_output/blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.read_cov.bamO.png)
+!![Plot](15_assembly_output/blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.read_cov.bamO.png)
 
 
 
