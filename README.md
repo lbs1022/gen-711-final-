@@ -238,7 +238,7 @@
   - We installed a nucleotide database to check for contamination
   - We ran a blast of our filtered genome
   - Because we found contamination in sample 69, we had to remove the contig using nano and refiltered the genome; We also checked for contamination again
-  - *Figure out how to visualize Genome and insert code*  
+  - We utilized IGV to visualize the genome, for now in a linear format. We had to index our genomes in order to insert them into the web platform and then we also inserted our GFF files to show the locations of genes in the genome assembly. 
     
     <details>
       <summary>code</summary>
@@ -249,6 +249,8 @@
     	  nano 69list_of_contigs_to_keep_len600_cov10.txt #remove the header: NODE_18_legnth_71546_cov_97.389896
     	  filter_contigs_by_list.py 69contigs.fasta 69list_of_contigs_to_keep_len600_cov10.txt Streptomyces_filtered2.fasta
           blastn -reward 1 -penalty -5 -gapopen 3 -gapextend 3 -dust yes -soft_masking true -evalue 700 -searchsp 1750000000000 -query Streptomyces_filtered2.fasta -subject UniVec  -outfmt 6 -out genome_vs_univec.6
+          samtools faidx Actinomadura_filtered.fasta
+    	  samtools faidx Streptomyces_filtered2.fasta
     </details>
 </details> 
 
