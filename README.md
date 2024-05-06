@@ -235,7 +235,10 @@
 
 ## Results
 
-![raw_quality_reads](Images/15ForRawFASTQC.png) 
+Sample 15 Raw Forward Reads:
+
+![Fastqc](Images/15ForRawFASTQC.png)
+ 
 
 
 
