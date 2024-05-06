@@ -232,6 +232,19 @@
  
     </details>
 </details>
+<details>
+  <summary>Confirmation of Filtered FASTA and Visualizing Final Genome</summary>
+
+  - need to do this, Blast to check, etc.
+  - Figure out how to visualize  
+    
+    <details>
+      <summary>code</summary>
+          
+          Put code here 
+          
+    </details>
+</details> 
 
 ## Results
 
