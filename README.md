@@ -251,15 +251,22 @@
 
 ## Results
 
-### Sample 15 FastQC Results:
+### FastQC Results:
 
-- There was some visible improvement in read quality in the 15 samples, more so in the reverse read
-- The Adapter Content decreased dramatically, failing in raw read FastQCs and passing in the trimmed analysis
+<details>
+  <summary>Sample 15</summary>
 
-### Sample 69 FastQC Results: 
+  - There was some visible improvement in read quality in the 15 samples, more so in the reverse read
+  - The Adapter Content decreased dramatically, failing in raw read FastQCs and passing in the trimmed analysis
+    
+</details>
+<details>
+  <summary>Sample 69</summary>
 
-- There is also some improvement in the read qualities of the 69 sample trimmed reads
-- The Adapter Content decreased dramatically, failing in raw read FastQCs and passing in the trimmed analysis
+  - There is also some improvement in the read qualities of the 69 sample trimmed reads
+  - The Adapter Content decreased dramatically, failing in raw read FastQCs and passing in the trimmed analysis
+    
+</details> 
 
 ### BUSCO and QUAST Results:
 <details>
