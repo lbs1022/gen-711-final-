@@ -235,9 +235,22 @@
 
 ## Results
 
-Sample 15 Raw Forward Reads:
+### Sample 15 FastQC Results:
 
+Sample 15 Raw Forward Read Quality:
 ![Fastqc](Images/15ForRawFASTQC.png)
+
+Sample 15 Trimmed Forward Read Quality:
+
+
+Sample 15 Raw Reverse Read Quality:
+
+
+Sample 15 Trimmed Reverse Read Quality: 
+
+
+### Sample 69 FastQC Results: 
+
  
 
 
