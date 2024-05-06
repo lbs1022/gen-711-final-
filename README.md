@@ -386,13 +386,13 @@ Sample 69 Trimmed Reverse Read Quality:
 - Majority under the Genus "Actinomadura"
 - Not much difference in coverage, may be hard to filter
 
-![plot](15_assembly_output/blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.read_cov.bam0.png)
+![plot](15_assembly_output/blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.bam0.png)
 
 69 Assembly:
 - Majority under the Genus "Streptomyces"
 - Some differentiation in coverage and read length, may be easier to filter
 
-![plot](69_assembly_output/blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.read_cov.bam0.png)
+![plot](69_assembly_output/69blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.bam0.png)
 
 
 
