@@ -161,7 +161,34 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
           blob_blast.sh 69contigs.fasta
           
     </details>
-</details>  
+</details>
+<details>
+  <summary>Read Mapping and Coverage Analysis</summary>
+
+  - By running both bwa mem and samtools programs, we mapped the alignment of our genomes and constructed SAM and BAM files
+  - We then ran the bedtools genomecov program to calculate the coverage per contig
+  - We finally ran the gen_input_table.py file to organize our calculated coverage into a table
+    
+    <details>
+      <summary>code</summary>
+          
+          bwa index 15contigs.fasta  
+          bwa index 69contigs.fasta       
+          bwa mem -t 24 15contigs.fasta ./trimmed_reads/15_S2_L001_R1_001.fastq.gz ./trimmed_reads/15_S2_L001_R2_001.fastq.gz > 15raw_mapped.sam        
+          bwa mem -t 24 69contigs.fasta ./trimmed_reads/69_S8_L001_R1_001.fastq.gz ./trimmed_reads/69_S8_L001_R2_001.fastq.gz > 69raw_mapped.sam      
+          samtools view -@ 24 -Sb  15raw_mapped.sam  | samtools sort -@ 24 -o 15sorted_mapped.bam    
+          samtools view -@ 24 -Sb  69raw_mapped.sam  | samtools sort -@ 24 -o 69sorted_mapped.bam    
+          samtools flagstat 15sorted_mapped.bam      
+          samtools flagstat 69sorted_mapped.bam      
+          samtools index 15sorted_mapped.bam      
+          samtools index 69orted_mapped.bam        
+          bedtools genomecov -ibam 15sorted_mapped.bam > 15coverage.out      
+          bedtools genomecov -ibam 69sorted_mapped.bam > 69coverage.out       
+          gen_input_table.py  --isbedfiles 15contigs.fasta 15coverage.out >  15coverage_table.tsv    
+          gen_input_table.py  --isbedfiles 69contigs.fasta 69coverage.out >  69coverage_table.tsv  
+          
+    </details>
+</details>
   
 
 READ MAPPING  
