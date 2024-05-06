@@ -189,43 +189,46 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
           
     </details>
 </details>
-  
+<details>
+  <summary>Visualizing Non-Target Contigs and The Genome Through blobtools</summary>
 
-READ MAPPING  
-bwa index 15contigs.fasta         
-bwa index 69contigs.fasta     
-bwa mem -t 24 15contigs.fasta ./trimmed_reads/15_S2_L001_R1_001.fastq.gz ./trimmed_reads/15_S2_L001_R2_001.fastq.gz > 15raw_mapped.sam      
-bwa mem -t 24 69contigs.fasta ./trimmed_reads/69_S8_L001_R1_001.fastq.gz ./trimmed_reads/69_S8_L001_R2_001.fastq.gz > 69raw_mapped.sam    
-samtools view -@ 24 -Sb  15raw_mapped.sam  | samtools sort -@ 24 -o 15sorted_mapped.bam  
-samtools view -@ 24 -Sb  69raw_mapped.sam  | samtools sort -@ 24 -o 69sorted_mapped.bam  
-samtools flagstat 15sorted_mapped.bam    
-samtools flagstat 69sorted_mapped.bam    
-samtools index 15sorted_mapped.bam    
-samtools index 69orted_mapped.bam      
-bedtools genomecov -ibam 15sorted_mapped.bam > 15coverage.out    
-bedtools genomecov -ibam 69sorted_mapped.bam > 69coverage.out     
-gen_input_table.py  --isbedfiles 15contigs.fasta 15coverage.out >  15coverage_table.tsv  
-gen_input_table.py  --isbedfiles 69contigs.fasta 69coverage.out >  69coverage_table.tsv 
+  - We ran the blob tools program in order to visualize the GC content, coverage, taxonomy, and contigs lengths of our genomes
+  - We first converted our input files into lookup table necessary to construct the plots; using the BLAST output to assign taxonomy and using the BAM file to give coeverage information
+  - We then converted that information into a human readable table and finally converted it into a plot we can use to filter our genomes
+    
+    <details>
+      <summary>code</summary>
+          
+          blobtools create -i 15contigs.fasta -b 15sorted_mapped.bam -t 15contigs.fasta.vs.nt.cul5.1e5.megablast.out -o 15blob_out        
+          blobtools create -i 69contigs.fasta -b 69sorted_mapped.bam -t 69contigs.fasta.vs.nt.cul5.1e5.megablast.out -o 69blob_out      
+          blobtools view -i 15blob_out.blobDB.json -r all -o 15blob_taxonomy        
+          blobtools view -i 69blob_out.blobDB.json -r all -o 69blob_taxonomy      
+          blobtools plot -i 15blob_out.blobDB.json -r genus       
+          blobtools plot -i 69blob_out.blobDB.json -r genus
+          
+    </details>
+</details> 
+<details>
+  <summary>Filtering the Genomes</summary>
 
-NONTARGET CONTIG REMOVAL  
-blobtools create -i 15contigs.fasta -b 15sorted_mapped.bam -t 15contigs.fasta.vs.nt.cul5.1e5.megablast.out -o 15blob_out    
-blobtools create -i 69contigs.fasta -b 69sorted_mapped.bam -t 69contigs.fasta.vs.nt.cul5.1e5.megablast.out -o 69blob_out  
-blobtools view -i 15blob_out.blobDB.json -r all -o 15blob_taxonomy    
-blobtools view -i 69blob_out.blobDB.json -r all -o 69blob_taxonomy  
-blobtools plot -i 15blob_out.blobDB.json -r genus    
-blobtools plot -i 69blob_out.blobDB.json -r genus
-
-FILTERING GENOME  
-#in order to decide the filtering criteria, we first tested the outcomes of filtering with different lengths and coverage numbers using the below code:  
-grep -v '#' 15blob_taxonomy.15blob_out.blobDB.table.txt | awk -F'\t' '$2 > <insert-legnth>' | awk -F'\t' '$5 < <insert-coverage>' | awk '{print $18}'     
-grep -v '#' 69blob_taxonomy.69blob_out.blobDB.table.txt | awk -F'\t' '$2 > <insert-legnth>' | awk -F'\t' '$5 < <insert-coverage>' | awk '{print $18}'  
-#once we decided on the filtering criteria, we ran the following code:  
-grep -v '##' 15blob_taxonomy.15blob_out.blobDB.table.txt | awk -F'\t' '$2 > 500' | awk -F'\t' '$5 > 20' | awk -F'\t' '{print $1}' > 15list_of_contigs_to_keep_len500_cov20.txt    
-grep -v '##' 69blob_taxonomy.69blob_out.blobDB.table.txt | awk -F'\t' '$2 > 600' | awk -F'\t' '$5 > 10' | awk -F'\t' '{print $1}' > 69list_of_contigs_to_keep_len600_cov10.txt  
-
-
-
-
+  - We first used grep programing, and awk to read our blob output table and decide filtering criteria to properly filter our genomes
+  - After deciding what filtering criteria was approproate for each genome, we used grep to grab those sequences and out put the contig header to a seperate file used to filter the fasta file in the next setep
+  - We then used a filtering tool to convert our original contigs to the final fasta file with our filtered genome 
+    
+    <details>
+      <summary>code</summary>
+          
+          #in order to decide the filtering criteria, we first tested the outcomes of filtering with different lengths and coverage numbers using the below code:  
+          grep -v '#' 15blob_taxonomy.15blob_out.blobDB.table.txt | awk -F'\t' '$2 > <insert-legnth>' | awk -F'\t' '$5 < <insert-coverage>' | awk '{print $18}'     
+          grep -v '#' 69blob_taxonomy.69blob_out.blobDB.table.txt | awk -F'\t' '$2 > <insert-legnth>' | awk -F'\t' '$5 < <insert-coverage>' | awk '{print $18}'  
+          #once we decided on the filtering criteria, we ran the following code:  
+          grep -v '##' 15blob_taxonomy.15blob_out.blobDB.table.txt | awk -F'\t' '$2 > 500' | awk -F'\t' '$5 > 20' | awk -F'\t' '{print $1}' > 15list_of_contigs_to_keep_len500_cov20.txt    
+          grep -v '##' 69blob_taxonomy.69blob_out.blobDB.table.txt | awk -F'\t' '$2 > 600' | awk -F'\t' '$5 > 10' | awk -F'\t' '{print $1}' > 69list_of_contigs_to_keep_len600_cov10.txt
+          filter_contigs_by_list.py 15contigs.fasta 15list_of_contigs_to_keep_len500_cov20.txt Actinomadura_filtered.fasta
+          filter_contigs_by_list.py 69contigs.fasta 69list_of_contigs_to_keep_len600_cov10.txt Streptomyces_filtered.fasta
+ 
+    </details>
+</details>
 
 ## Conclusion  
 chat GPT can be very helpful   
