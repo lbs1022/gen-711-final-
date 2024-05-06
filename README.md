@@ -387,14 +387,15 @@
 - Not much difference in coverage or read length, may be hard to filter
 
 ![plot](15_assembly_output/blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.bam0.png)
+Fig 1. Shows the contig length, coverage, and taxonomy of the unfiltered Sample 15 assembly. The size of the "blobs" indicates the length of the contigs and where they fall indicates the coverage. 
 
 69 Assembly:
 - Majority under the Genus *Streptomyces*
 - Some differentiation in coverage and read length, should be easier to filter
 
 ![plot](69_assembly_output/69blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.bam0.png)
-
+Fig 2. Shows the contig length, coverage, and taxonomy of the unfiltered Sample 69 assembly. The size of the "blobs" indicates the length of the contigs and where they fall indicates the coverage.
 
 
 ## Conclusion  
-chat GPT is extremely helpful in the construction of bacterial genomes. It helped with trouble shooting and explained why certain programs weren't working when it seemed they should have.   
+chat GPT is extremely helpful in the construction of bacterial genomes. It helped with troubleshooting and explained why certain programs weren't working when it seemed they should have.   
