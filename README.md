@@ -233,5 +233,10 @@
     </details>
 </details>
 
+## Results
+Sample 15 forward raw reads analysis:
+(fastqc_output/15_S2_L001_R1_001_fastqc.html)
+
+
 ## Conclusion  
 chat GPT can be very helpful   
