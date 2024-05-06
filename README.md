@@ -196,8 +196,8 @@
   <summary>Visualizing Non-Target Contigs and The Genome Through blobtools</summary>
 
   - We ran the blob tools program in order to visualize the GC content, coverage, taxonomy, and contigs lengths of our genomes
-  - We first converted our input files into lookup table necessary to construct the plots; using the BLAST output to assign taxonomy and using the BAM file to give coeverage information
-  - We then converted that information into a human readable table and finally converted it into a plot we can use to filter our genomes
+  - We first converted our input files into a lookup table necessary to construct the plots; using the BLAST output to assign taxonomy and using the BAM file to give coverage information
+  - We then converted that information into a human-readable table and finally converted it into a plot we can use to filter our genomes
     
     <details>
       <summary>code</summary>
@@ -214,9 +214,9 @@
 <details>
   <summary>Filtering the Genomes</summary>
 
-  - We first used grep programing, and awk to read our blob output table and decide filtering criteria to properly filter our genomes
-  - After deciding what filtering criteria was approproate for each genome, we used grep to grab those sequences and out put the contig header to a seperate file used to filter the fasta file in the next setep
-  - We then used a filtering tool to convert our original contigs to the final fasta file with our filtered genome 
+  - We first used grep programming, and awk to read our blob output table and decide on filtering criteria to filter our genomes
+  - After deciding what filtering criteria was approproate for each genome, we used grep to grab those sequences and output the contig header to a separate file used to filter the fasta file in the next step
+  - We then used a filtering python file to convert our original contigs to the final fasta file with our filtered genome 
     
     <details>
       <summary>code</summary>
@@ -235,8 +235,8 @@
 <details>
   <summary>Confirmation of Filtered FASTA and Visualizing Final Genome</summary>
 
-  - Installed a nucleotide database to check for contamination
-  - Ran a blast of our filtered genome
+  - We installed a nucleotide database to check for contamination
+  - We ran a blast of our filtered genome
   - Because we found contamination in sample 69, we had to remove the contig using nano and refiltered the genome; We also checked for contamination again
   - *Figure out how to visualize Genome and insert code*  
     
