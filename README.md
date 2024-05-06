@@ -237,6 +237,18 @@
 
 ### Sample 15 FastQC Results:
 
+- There was some visible improvement in read quality in the 15 samples, more so in the reverse read
+- The Adapter Content decreased dramatically, failing in raw read FastQCs and passing in the trimmed analysis
+
+Sample 15 Trimmed Forward Read Quality:
+![Fastqc](Images/Trimmed15ForFASTQ.png)
+
+Sample 15 Raw Reverse Read Quality:
+![Fastqc](Images/15RevRawFASTQ.png)
+
+Sample 15 Trimmed Reverse Read Quality: 
+![Fastqc](Images/15trimmedRevFASTQ.png)
+
 Sample 15 Raw Forward Read Quality:
 ![Fastqc](Images/15ForRawFASTQC.png)
 
@@ -251,11 +263,14 @@ Sample 15 Trimmed Reverse Read Quality:
 
 ### Sample 69 FastQC Results: 
 
+- There is also some improvement in the read qualities of the 69 sample trimmed reads
+- he Adapter Content decreased dramatically, failing in raw read FastQCs and passing in the trimmed analysis
+  
 Sample 69 Raw Forward Read Quality:
 ![Fastqc](Images/69ForwardRawFASTQC.png)
 
 Sample 69 Trimmed Forward Read Quality:
-![Fastqc](Images/ForwardTrimmedFASTQC.png)
+![Fastqc](Images/69ForwardTrimmedFASTQC.png)
 
 Sample 69 Raw Reverse Read Quality:
 ![Fastqc](Images/69ReverseRawFATSQC.png)
