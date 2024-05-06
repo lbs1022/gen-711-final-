@@ -7,7 +7,7 @@
 - This specific project was led by Joseph Sevigny, Steve Simpson, Kelley Thomas, and Andrea de Assis.
 - The data and microbe collection was done in the summer of 2022 in Arcadia National Park.
 - The microbe samples were sequenced utilizing Illumina Sequencing
-- In this bioinformatics project, we will utilize bioinformatic coding and command-line to assemble and assign taxonomy to two different samples from the above study 
+- In this analysis, we will utilize bioinformatic coding and command-line to assemble the genome and assign taxonomy to two different samples from the above study 
 ## Methods 
 <details>
   <summary>Prep Directories and Obtain Data</summary>
