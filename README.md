@@ -1,4 +1,4 @@
-# FINAL PROJECT  
+# Bacterial Genome Assembly Study  
 ## Study Background 
 
 - The data was originally collected by the UNH Tech camp, who also did an initial study on the data.
