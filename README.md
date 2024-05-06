@@ -251,6 +251,17 @@ Sample 15 Trimmed Reverse Read Quality:
 
 ### Sample 69 FastQC Results: 
 
+Sample 69 Raw Forward Read Quality:
+![Fastqc](Images/69ForwardRawFASTQC.png)
+
+Sample 69 Trimmed Forward Read Quality:
+![Fastqc](Images/ForwardTrimmedFASTQC.png)
+
+Sample 69 Raw Reverse Read Quality:
+![Fastqc](Images/69ReverseRawFATSQC.png)
+
+Sample 69 Trimmed Reverse Read Quality: 
+![Fastqc](Images/69ReverseTrimmedFASTQC.png)
  
 
 
