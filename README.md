@@ -273,20 +273,22 @@ Sample 69 Trimmed Reverse Read Quality:
 <details>
   <summary>15-BUSCO Results</summary>
 
-  - The PROKKA output assigned many different functions to our DNA sequences, including genes that code for 16S rRNA
-  - We ran an extraction program that pulled 16S rRNA gene sequences into a separate file in prep for BLAST 
+  - The good majority of genes in the assembly were found to be complete and a single-copy
+  - This indicates a rather complete assembly 
 
     <details>
       <summary>code</summary>
           
-          extract_sequences "16S ribosomal RNA" prokka_output_15/PROKKA_05032024.ffn > 16S_sequence_15.fasta
-          extract_sequences "16S ribosomal RNA" prokka_output_69/PROKKA_05032024.ffn > 16S_sequence_69.fasta
-          
+          ***** Results: *****
+    	   
+	        123	Complete BUSCOs (C)			   
+	        119	Complete and single-copy BUSCOs (S)	   
+	        4	Complete and duplicated BUSCOs (D)	   
+	        1	Fragmented BUSCOs (F)			   
+	        0	Missing BUSCOs (M)			   
+	        124	Total BUSCO groups searched 
     </details>
 </details>
-<details>
-  <summary>Organism Identification through BLAST</summary>
-
 
 
 
