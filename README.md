@@ -401,9 +401,11 @@ Fig 2. Shows the contig length, coverage, and taxonomy of the unfiltered Sample 
 
 ### Final Visualizations
 
+#### Sample 15 Visualization
 ![plot](Images/ActinomaduraLinear.png)
 Fig 3. Shows the visual linearized genome of sample 15, which was identified to be in the genus, *Actinomadura*
 
+#### Sample 69 Visualization
 ![plot](Images/StreptomycesLinear.png)
 Fig 4. Shows the visual linearized genome of sample 69, which was identified to be in the genus, *Streptomyces*
 
