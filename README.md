@@ -235,7 +235,22 @@
 
 ## Results
 
-![Plot](fastqc_output/15_S2_L001_R1_001_fastqc.html)
+  div.main {
+    display:block;
+    position:absolute;
+    overflow:auto;
+    height:auto;
+    width:auto;
+    top:4.5em;
+    bottom:2.3em;
+    left:18em;
+    right:0;
+    border-left: 1px solid #CCC;
+    padding:0 0 0 1em;
+    background-color: white;
+    z-index:1;
+  }
+
 
 
 
