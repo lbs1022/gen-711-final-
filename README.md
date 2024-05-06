@@ -382,13 +382,14 @@
 ### Taxonomic Assessment and Visualization
 
 15 Assembly:
-- Majority under the Genus "Actinomadura"
-- Not much difference in coverage or read legnth, may be hard to filter
+- Majority of contigs under the Genus *Actinomadura*
+- Quite a few contigs under *Streptomyces*, but *Actinomadura* is the clear major genus
+- Not much difference in coverage or read length, may be hard to filter
 
 ![plot](15_assembly_output/blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.bam0.png)
 
 69 Assembly:
-- Majority under the Genus "Streptomyces"
+- Majority under the Genus *Streptomyces*
 - Some differentiation in coverage and read length, should be easier to filter
 
 ![plot](69_assembly_output/69blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.bam0.png)
@@ -396,4 +397,4 @@
 
 
 ## Conclusion  
-chat GPT can be very helpful   
+chat GPT is extremely helpful in the construction of bacterial genomes. It helped with trouble shooting and explained why certain programs weren't working when it seemed they should have.   
