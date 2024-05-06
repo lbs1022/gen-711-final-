@@ -8,10 +8,13 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
 ## Methods - I used this code 
 <details>
   <summary>Prep Directories and Obtain Data</summary>
+  
    - We made a final project directory called "gen-711-final-project"  
-   - then pulled the forward and backward reads for samples 69 and 15    
+   - then pulled the forward and backward reads for samples 69 and 15
+        
         <details> 
         <summary>code</summary>
+          
           mkdir gen-711-final-project   
           cd gen-711-final-project  
           mkdir raw_reads  
@@ -19,7 +22,8 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
           cp /tmp/gen711_project_data/genome-assembly-fqs/69_S8_L001_R2_001.fastq.gz raw_reads  
           cp /tmp/gen711_project_data/genome-assembly-fqs/15_S2_L001_R1_001.fastq.gz raw_reads  
           cp /tmp/gen711_project_data/genome-assembly-fqs/15_S2_L001_R2_001.fastq.gz raw_reads  
-          mkdir fastqc_output      
+          mkdir fastqc_output
+         
         </details>
 </details>
 
