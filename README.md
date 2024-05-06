@@ -76,12 +76,22 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
       
     </details>
 </details>
+<details>
+  <summary>Genome Assembly using SPAdes</summary>
 
-GENOME ASSEMBLY    
-conda activate genomics  
-cd ~/gen-711-final-project  
-nohup spades.py -1 15_S2_L001_R1_001.fastq.gz -2 15_S2_L001_R2_001.fastq.gz -s unpaired-15_S2_L001_R1_001.fastq.gz -s unpaired-15_S2_L001_R2_001.fastq.gz -o 15-spades-assembly-default -t 24 &  
-nohup spades.py -1 69_S8_L001_R1_001.fastq.gz -2 69_S8_L001_R2_001.fastq.gz -s unpaired-69_S8_L001_R1_001.fastq.gz -s unpaired-69_S8_L001_R2_001.fastq.gz -o 69-spades-assembly-default -t 24 &  
+  - Now with trimmed reads, we can assemble the genome and get contigs by utilizing an assembly program
+  - We are using a program called SPAdes, which is pretty efficient at assembling bacterial genomes
+  - We also used nohup and & in combination as this program takes a while to compute and it allows the program to run even if we turn off out computers
+
+    <details>
+      <summary>code</summary>
+          
+          cd ~/gen-711-final-project
+          nohup spades.py -1 15_S2_L001_R1_001.fastq.gz -2 15_S2_L001_R2_001.fastq.gz -s unpaired-15_S2_L001_R1_001.fastq.gz -s unpaired-15_S2_L001_R2_001.fastq.gz -o 15-spades-assembly-default -t 24 &
+          nohup spades.py -1 69_S8_L001_R1_001.fastq.gz -2 69_S8_L001_R2_001.fastq.gz -s unpaired-69_S8_L001_R1_001.fastq.gz -s unpaired-69_S8_L001_R2_001.fastq.gz -o 69-spades-assembly-default -t 24 & 
+      
+    </details>
+</details>
 
 GENOME ASSESMENT    
 quast.py 15contigs.fasta -o quast_results_15    
