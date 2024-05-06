@@ -235,13 +235,16 @@
 <details>
   <summary>Confirmation of Filtered FASTA and Visualizing Final Genome</summary>
 
-  - need to do this, Blast to check, etc.
+  - Installed a nucleotide database to check for contamination
+  - Ran a blast of our filtered genome
   - Figure out how to visualize  
     
     <details>
       <summary>code</summary>
           
-          Put code here 
+          wget "https://ftp.ncbi.nlm.nih.gov/pub/UniVec/UniVec"
+          blastn -reward 1 -penalty -5 -gapopen 3 -gapextend 3 -dust yes -soft_masking true -evalue 700 -searchsp 1750000000000 -query Actinomadura_filtered.fasta -subject UniVec  -outfmt 6 -out genome_vs_univec.6
+	  blastn -reward 1 -penalty -5 -gapopen 3 -gapextend 3 -dust yes -soft_masking true -evalue 700 -searchsp 1750000000000 -query Streptomyces_filtered.fasta -subject UniVec  -outfmt 6 -out genome_vs_univec.6
           
     </details>
 </details> 
@@ -253,41 +256,17 @@
 - There was some visible improvement in read quality in the 15 samples, more so in the reverse read
 - The Adapter Content decreased dramatically, failing in raw read FastQCs and passing in the trimmed analysis
 
-Sample 15 Raw Forward Read Quality:
-![Fastqc](Images/15ForRawFASTQC.png)
-
-Sample 15 Trimmed Forward Read Quality:
-![Fastqc](Images/Trimmed15ForFASTQ.png)
-
-Sample 15 Raw Reverse Read Quality:
-![Fastqc](Images/15RevRawFASTQ.png)
-
-Sample 15 Trimmed Reverse Read Quality: 
-![Fastqc](Images/15trimmedRevFASTQ.png)
-
 ### Sample 69 FastQC Results: 
 
 - There is also some improvement in the read qualities of the 69 sample trimmed reads
 - The Adapter Content decreased dramatically, failing in raw read FastQCs and passing in the trimmed analysis
-  
-Sample 69 Raw Forward Read Quality:
-![Fastqc](Images/69ForwardRawFASTQC.png)
-
-Sample 69 Trimmed Forward Read Quality:
-![Fastqc](Images/69ForwardTrimmedFASTQC.png)
-
-Sample 69 Raw Reverse Read Quality:
-![Fastqc](Images/69ReverseRawFATSQC.png)
-
-Sample 69 Trimmed Reverse Read Quality: 
-![Fastqc](Images/69ReverseTrimmedFASTQC.png)
 
 ### BUSCO and QUAST Results:
 <details>
   <summary>15-BUSCO Results</summary>
 
   - The good majority of genes in the assembly were found to be complete and a single-copy
-  - This indicates a rather complete assembly 
+  - This indicates a complete assembly 
 
     <details>
      <summary>Busco Data</summary>
@@ -306,7 +285,7 @@ Sample 69 Trimmed Reverse Read Quality:
   <summary>69-BUSCO Results</summary>
 
   - The good majority of genes in the assembly were found to be complete and a single-copy
-  - This indicates a rather complete assembly 
+  - This indicates a complete assembly 
 
     <details>
       <summary>Busco Data</summary>
@@ -358,7 +337,7 @@ Sample 69 Trimmed Reverse Read Quality:
   <summary>69-QUAST Results</summary>
 	
 - The N50 in the QUAST Report is just about 3.6kb, which isn't the best
-- However, based on the BUSCO results the lack of contiguity should not become an issue
+- So we do not have a very contiguous genome
 
     <details>
       <summary>QUAST Data</summary>
@@ -389,21 +368,18 @@ Sample 69 Trimmed Reverse Read Quality:
     </details>
 </details>
 
-### PROKKA Protein Abundance Results
-
-- Someone insert the Protein Result Data
 
 ### Taxonomic Assessment and Visualization
 
 15 Assembly:
 - Majority under the Genus "Actinomadura"
-- Not much difference in coverage, may be hard to filter
+- Not much difference in coverage or read legnth, may be hard to filter
 
 ![plot](15_assembly_output/blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.bam0.png)
 
 69 Assembly:
 - Majority under the Genus "Streptomyces"
-- Some differentiation in coverage and read length, may be easier to filter
+- Some differentiation in coverage and read length, should be easier to filter
 
 ![plot](69_assembly_output/69blob_out.blobDB.json.bestsum.genus.p8.span.100.blobplot.bam0.png)
 
