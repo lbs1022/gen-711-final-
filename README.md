@@ -1,10 +1,10 @@
 # FINAL PROJECT  
 ## Study Background 
-The UNH Tech Camp was the group that collected the data and did an initial study on them.
-This camp was made of kids from grade 5 to 12.
-John Caparso, Alex Goin, Amino Hussein, Tonya Kirichok, Ada Milhauser, Aakansh Mysore, Nana Suarez, Olivia Tatro, Logan Quiter & Yasmin Yan were all the students that worked on this study. 
-This specific project was led by Joseph Sevigny, Steve Simpson, Kelley Thomas and Andrea de Assis.
-All of the data was collected in the summer of 2022 from Acadia National Park in Maine. 
+The data was originally collected by the UNH Tech camp, who also did an initial study on the data.
+This camp was primarily composed of kids from grade 5 to 12.
+The students who specifically worked on this study include John Caparso, Alex Goin, Amino Hussein, Tonya Kirichok, Ada Milhauser, Aakansh Mysore, Nana Suarez, Olivia Tatro, Logan Quiter, and Yasmin Yan.
+This specific project was led by Joseph Sevigny, Steve Simpson, Kelley Thomas, and Andrea de Assis.
+The data and microbe collection was done in the summer of 2022 in Arcadia National Park. 
 ## Methods - I used this code 
 <details>
   <summary>Prep Directories and Obtain Data</summary>
