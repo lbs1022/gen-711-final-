@@ -81,7 +81,7 @@ The data and microbe collection was done in the summer of 2022 in Arcadia Nation
 
   - Now with trimmed reads, we can assemble the genome and get contigs by utilizing an assembly program
   - We are using a program called SPAdes, which is pretty efficient at assembling bacterial genomes
-  - We also used nohup and & in combination, as this program takes a while to compute and it allows the program to run even if we turn off our computers
+  - We also used nohup and & commands in combination, as SPAdes takes a while to compute and it allows the program to run even if we turn off our computers or leave ron
 
     <details>
       <summary>code</summary>
