@@ -234,16 +234,9 @@
 </details>
 
 ## Results
-<details> 
-  <summary>FASTQC Read Quality</summary>
-  
-  <details>
-    <summary>Sample 15 Raw Reads</summary>
 
-      ![raw_quality_reads](Images/15ForRawFASTQC.png)
-    
-  </details>
-</details>
+![raw_quality_reads](Images/15ForRawFASTQC.png) 
+
 
 
 
