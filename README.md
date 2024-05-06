@@ -277,7 +277,7 @@ Sample 69 Trimmed Reverse Read Quality:
   - This indicates a rather complete assembly 
 
     <details>
-      <summary>code</summary>
+     <summary>Busco Data</summary>
           
           ***** Results: *****
     	   
@@ -296,16 +296,16 @@ Sample 69 Trimmed Reverse Read Quality:
   - This indicates a rather complete assembly 
 
     <details>
-      <summary>code</summary>
+      <summary>Busco Data</summary>
           
           ***** Results: *****
-    	   
-	        123	Complete BUSCOs (C)			   
-	        119	Complete and single-copy BUSCOs (S)	   
-	        4	Complete and duplicated BUSCOs (D)	   
-	        1	Fragmented BUSCOs (F)			   
-	        0	Missing BUSCOs (M)			   
-	        124	Total BUSCO groups searched 
+   
+		122	Complete BUSCOs (C)			   
+		121	Complete and single-copy BUSCOs (S)	   
+		1	Complete and duplicated BUSCOs (D)	   
+		2	Fragmented BUSCOs (F)			   
+		0	Missing BUSCOs (M)			   
+		124	Total BUSCO groups searched 
     </details>
 </details>
 
