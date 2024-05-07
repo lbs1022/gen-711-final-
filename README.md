@@ -14,7 +14,8 @@
   <summary>Prep Directories and Obtain Data</summary>
   
    - We made a final project directory called "gen-711-final-project"  
-   - We then pulled the forward and backward reads for samples 69 and 15
+   - We then pulled the forward and backward reads for samples 69 and 15 into a "raw_reads" directory
+   - We also prepped the directory for the FastQC outputs
         
         <details> 
         <summary>code</summary>
@@ -67,7 +68,7 @@
 <details>
   <summary>FastQC Analysis of Trimmed Reads</summary>
 
-  - After running trimmomatic, we now have to run a FastQC analysis to assess the quality of the reads
+  - After running trimmomatic, we ran a FastQC analysis to assess the quality of the reads
   - This allows us to analyze how the quality of reads improved after trimming them
 
     <details>
@@ -101,7 +102,7 @@
 
   - Now with contigs, we can assess the quality of our assembly
   - The first program we ran, QUAST, tells us how well the genome was assembled and gives us valuable information such as total nucleotide length, N50, and the sizes of the individual contigs
-  - The second program, BUSCO, tells us the completeness of the assembly; it can tell us how many complete, fragmented, or duplicate genes we have
+  - The second program, BUSCO, tells us the completeness of the assembly; it can tell us how many complete, fragmented, or duplicated genes we have
 
     <details>
       <summary>code</summary>
@@ -152,7 +153,7 @@
   - BLAST, or the Basic Local Alignment Search Tool, allows us to assign taxonomy to the samples we assembled
   - We first established a blast database using our original contig files
   - We then ran a blast comparing the database to the 16S rRNA sequences
-  - Finally, we ran a blob blast SH program of our original contig files that outputs a file detailing taxonomic matches of each contig sequence
+  - Finally, we used the file, blob_blast.sh, to blast out contig sequences and output a file detailing taxonomic matches
 
     <details>
       <summary>code</summary>
@@ -194,7 +195,7 @@
     </details>
 </details>
 <details>
-  <summary>Visualizing Non-Target Contigs and The Genome Through blobtools</summary>
+  <summary>Visualizing Non-Target Contigs and Taxonomy Through blobtools</summary>
 
   - We ran the blob tools program in order to visualize the GC content, coverage, taxonomy, and contigs lengths of our genomes
   - We first converted our input files into a lookup table necessary to construct the plots; using the BLAST output to assign taxonomy and using the BAM file to give coverage information
@@ -215,8 +216,8 @@
 <details>
   <summary>Filtering the Genomes</summary>
 
-  - We first used grep programming, and awk to read our blob output table and decide on filtering criteria to filter our genomes
-  - After deciding what filtering criteria was appropriate for each genome, we used grep to grab those sequences and output the contig header to a separate file used to filter the fasta file in the next step
+  - We first used grep programming, and 'awk' commands to read our blob output table and decide on filtering criteria to filter our genomes
+  - After deciding what filtering criteria were appropriate for each genome, we used grep to grab those sequences and output the contig header to a separate file used to filter the fasta file in the next step
   - We then used the file, filter_contigs_by_list.py, to convert our original contigs to the final fasta file with our filtered genome 
     
     <details>
@@ -237,9 +238,9 @@
   <summary>Confirmation of Filtered FASTA and Visualizing Final Genome</summary>
 
   - We installed a nucleotide database to check for contamination
-  - We ran a blast of our filtered genome
-  - Because we found contamination in sample 69, we had to remove the contig using nano and refiltered the genome; We also checked for contamination again
-  - We utilized the program, Proksee, to visualize the genome. We utilized the gbk file output from the PROKKA genome annotation as an input to develop the circular genome visual maps. 
+  - We ran a blast of our filtered genome, the result of the blast should be empty if no contamination was found
+  - Because we found contamination in sample 69, we had to remove the contig using nano and refiltered the genome; We also checked for contamination again and found nothing
+  - We utilized the program, Proksee, to visualize the genome. We utilized the GBK file output from the PROKKA genome annotation as an input to develop the circular genome visual maps. 
     
     <details>
       <summary>code</summary>
