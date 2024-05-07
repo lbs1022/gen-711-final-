@@ -303,5 +303,22 @@ Fig 3. Shows the visualized genome of sample 15, which was identified to be in t
 Fig 4. Shows the visualized genome of sample 69, which was identified to be in the genus, *Streptomyces*
 
 
-## Conclusion  
-chat GPT is extremely helpful in the construction of bacterial genomes. It helped with troubleshooting and explained why certain programs weren't working when it seemed they should have.   
+## Bibliography  
+chat GPT is extremely helpful in the construction of bacterial genomes. It helped with troubleshooting and explained why certain programs weren't working when it seemed they should have. 
+
+Things we need to cite
+- The original study
+- FastQC
+- Trimmomatic
+- SPAdes
+- QUAST
+- BUSCO
+- PROKKA
+- BLAST
+- bwa mem
+- samtools
+- the premade files on jeffs github; ex. filter_contigs_by_list.py
+- https://ftp.ncbi.nlm.nih.gov/pub/UniVec/UniVec
+- Proksee
+- Blobtools
+- Chat GPT
