@@ -318,7 +318,6 @@ Things we need to cite
 - BLAST
 - bwa mem
 - samtools
-- the premade files on jeffs github; ex. filter_contigs_by_list.py
 - https://ftp.ncbi.nlm.nih.gov/pub/UniVec/UniVec
 - Proksee
 - Blobtools
