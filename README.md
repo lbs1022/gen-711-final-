@@ -303,10 +303,10 @@ Fig 3. Shows the visualized genome of sample 15, which was identified to be in t
 ![plot](Images/StrepGenome.png)
 Fig 4. Shows the visualized genome of sample 69, which was identified to be in the genus, *Streptomyces*
 
+## Conclusion 
+
 
 ## Bibliography  
-chat GPT is extremely helpful in the construction of bacterial genomes. It helped with troubleshooting and explained why certain programs weren't working when it seemed they should have. 
-
 Things we need to cite
 - The original study
 - FastQC
