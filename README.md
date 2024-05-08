@@ -307,18 +307,16 @@ Fig 4. Shows the visualized genome of sample 69, which was identified to be in t
 
 
 ## Bibliography  
-Things we need to cite
-- The original study
-- FastQC
-- Trimmomatic
-- SPAdes
-- QUAST
-- BUSCO
-- PROKKA
-- BLAST
-- bwa mem
-- samtools
-- https://ftp.ncbi.nlm.nih.gov/pub/UniVec/UniVec
-- Proksee
-- Blobtools
-- Chat GPT
+- Andrews, S. (n.d.). FastQC: A quality control tool for high throughput sequence data. Retrieved from https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ 
+- Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina sequence data. Bioinformatics, 30(15), 2114–2120. DOI: 10.1093/bioinformatics/btu170
+- Seemann, T. (n.d.). PROKKA: Rapid prokaryotic genome annotation. Retrieved from https://github.com/tseemann/prokka
+- Bankevich, A., Nurk, S., Antipov, D., Gurevich, A. A., Dvorkin, M., Kulikov, A. S., ... Pevzner, P. A. (2012). SPAdes: A new genome assembly algorithm and its applications to single-cell sequencing. Journal of Computational Biology, 19(5), 455–477. DOI: 10.1089/cmb.2012.0021
+- Gurevich, A., Shabalin, V., Pevzner, A. G., Korobeynikov, A., & Pevzner, P. A. (2013). QUAST: quality assessment tool for genome assemblies. Bioinformatics, 29(8), 1072–1075. DOI: 10.1093/bioinformatics/btt086
+- Simão, F. A., Waterhouse, R. M., Ioannidis, P., Kriventseva, E. V., & Zdobnov, E. M. (2015). BUSCO: Assessing genome assembly and annotation completeness with single-copy orthologs. Bioinformatics, 31(19), 3210–3212. DOI: 10.1093/bioinformatics/btv351
+- Li, H., & Durbin, R. (2009). Fast and accurate short read alignment with Burrows-Wheeler transform. Bioinformatics, 25(14), 1754–1760. DOI: 10.1093/bioinformatics/btp324
+- Li, H., Handsaker, B., Wysoker, A., Fennell, T., Ruan, J., Homer, N., ... Durbin, R. (2009). The Sequence Alignment/Map format and SAMtools. Bioinformatics, 25(16), 2078–2079. DOI: 10.1093/bioinformatics/btp352
+- Laetsch, D. R., & Blaxter, M. L. (2017). BlobTools: Interrogation of genome assemblies. F1000Research, 6, 1287. DOI: 10.12688/f1000research.12231.1
+- Proksee. (n.d.). Home [Website]. Retrieved from https://proksee.ca/
+- National Center for Biotechnology Information. (n.d.). UniVec Database. Retrieved from https://ftp.ncbi.nlm.nih.gov/pub/UniVec/UniVec
+- OpenAI. (n.d.). ChatGPT [AI language model]. Retrieved from  https://chatgpt.com/
+- Miller, J. (n.d.). MDIBL-T3-WGS-Tutorial. GitHub. https://github.com/jthmiller/MDIBL-T3-WGS-Tutorial
