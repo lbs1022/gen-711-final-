@@ -1,4 +1,5 @@
 # Bacterial Genome Assembly Study  
+Matthew Farbaniec, Lily Sylverstre, and Noah Mello
 ## Study Background 
 
 - The data was originally collected by the UNH Tech camp, who also did an initial study on the data.
