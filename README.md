@@ -304,7 +304,13 @@ Fig 3. Shows the visualized genome of sample 15, which was identified to be in t
 Fig 4. Shows the visualized genome of sample 69, which was identified to be in the genus, *Streptomyces*
 
 ## Conclusion 
-
+- While this was only done on two samples, with all of the codes that were used and the .sh file that was created can be used in a mass replication for a bunch of unknown samples
+- Knowing the basics of coding is an important skill to have for things that may not be directly coding itself
+- The coding involved in this project was not extremely hard but can easily go wrong
+- The ability to be given samples and figure out what type of bacteria the sample was is an incredible skill
+- There are many sources online that have the ability to explain what goes wrong and how to fix it
+- There are a multitude of codes and coding programs that can be used to identify different biological substances and help to understand more about biological processes, specifically in the context of genomics
+- Bioinformatics is a quickly growing feild and there is so much that it can be used to understand 
 
 ## Bibliography  
 - Andrews, S. (n.d.). FastQC: A quality control tool for high throughput sequence data. Retrieved from https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ 
